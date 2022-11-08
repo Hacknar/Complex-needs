@@ -1,0 +1,132 @@
+<ModOps>
+  <ModOp Type="add" Path="/TextExport/Texts">
+				<Text>
+					<GUID>103690500</GUID>
+					<Text>Basic Grocery</Text>
+				</Text>
+				<Text>
+					<GUID>103690501</GUID>
+					<Text>Basic Grocery Market</Text>
+				</Text>
+				<Text>
+					<GUID>103690502</GUID>
+					<Text>Basic Grocery</Text>
+				</Text>
+				<Text>
+					<GUID>103690509</GUID>
+					<Text>The basic nutrition bundle.</Text>
+				</Text>
+				<Text>
+					<GUID>103690508</GUID>
+					<Text>Provides all the basics to fill your dispensary.</Text>
+				</Text>
+				<Text>
+					<GUID>103690600</GUID>
+					<Text>Processed Foods</Text>
+				</Text>
+				<Text>
+					<GUID>103690601</GUID>
+					<Text>Processed Foods Market</Text>
+				</Text>
+				<Text>
+					<GUID>103690602</GUID>
+					<Text>Processed Foods</Text>
+				</Text>
+				<Text>
+					<GUID>103690609</GUID>
+					<Text>Condensed and refined nutrition.</Text>
+				</Text>
+				<Text>
+					<GUID>103690608</GUID>
+					<Text>Provides prepared and practical edibles.</Text>
+				</Text>
+				<Text>
+					<GUID>103690700</GUID>
+					<Text>Exotic Foods</Text>
+				</Text>
+				<Text>
+					<GUID>103690701</GUID>
+					<Text>Exotic Foods Cuisine</Text>
+				</Text>
+				<Text>
+					<GUID>103690702</GUID>
+					<Text>Exotic Foods</Text>
+				</Text>
+				<Text>
+					<GUID>103690708</GUID>
+					<Text>Provides luxury and exotic edibles.</Text>
+				</Text>				
+				<Text>
+					<GUID>103690709</GUID>
+					<Text>Made by the best, for the best, from the best.</Text>
+				</Text>
+				<Text>
+					<GUID>103690800</GUID>
+					<Text>NW Agricultural Goods</Text>
+				</Text>
+				<Text>
+					<GUID>103690801</GUID>
+					<Text>Agricultural Goods Market</Text>
+				</Text>
+				<Text>
+					<GUID>103690802</GUID>
+					<Text>Agricultural Goods ProdChain</Text>
+				</Text>
+				<Text>
+					<GUID>103690808</GUID>
+					<Text>Provides all the basics to fill your dispensary.</Text>
+				</Text>
+				<Text>
+					<GUID>103690809</GUID>
+					<Text>Nutritious, sweet and sour.</Text>
+				</Text>
+				<Text>
+								<GUID>500004369</GUID>
+								<Text>Flour</Text>
+				</Text>
+				<Text>
+					<GUID>103690900</GUID>
+					<Text>Advanced Agricultural Goods</Text>
+				</Text>
+				<Text>
+					<GUID>103690901</GUID>
+					<Text>Advanced Agricultural Goods Market</Text>
+				</Text>
+				<Text>
+					<GUID>103690902</GUID>
+					<Text>Advanced Agricultural Goods ProdChain</Text>
+				</Text>
+				<Text>
+					<GUID>103690908</GUID>
+					<Text>Essential for the finest of cuisine practices.</Text>
+				</Text>
+				<Text>
+					<GUID>103690909</GUID>
+					<Text>Exotic tasty nutrition.</Text>
+				</Text>
+				<Text>
+					<GUID>103691000</GUID>
+					<Text>Exotic Agricultural Goods</Text>
+				</Text>
+				<Text>
+					<GUID>103691001</GUID>
+					<Text>Exotic Agricultural Goods Market</Text>
+				</Text>
+				<Text>
+					<GUID>103691002</GUID>
+					<Text>Exotic Agricultural Goods ProdChain</Text>
+				</Text>
+				<Text>
+					<GUID>103691009</GUID>
+					<Text>Extra Exotic tasty nutrition.</Text>
+				</Text>
+				<Text>
+					<GUID>103691008</GUID>
+					<Text>Essential for the finest of cuisine practices.</Text>
+				</Text>
+				<Text>
+					<GUID>103691009</GUID>
+					<Text>Extra Exotic tasty nutrition.</Text>
+				</Text>
+  </ModOp>
+</ModOps>

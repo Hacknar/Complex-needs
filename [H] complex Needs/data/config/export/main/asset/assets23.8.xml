@@ -1,0 +1,4532 @@
+<!--
+
+	STRUCTURE
+
+	Population Inputs
+		Farmer Needs
+			Farmer Luxuries
+		Worker Needs
+			Worker Luxuries
+		Artisan Needs
+			Artisan Luxuries
+		Engineer Needs
+			Engineer Luxuries
+		Investor Needs
+			Investor Luxuries
+
+	Original Asset Pools Tweaks
+			Grain Only Asset pool
+			Grain Only Production Chain
+				Bread Asset pool Simplified
+			Grain Mill Tweak
+		Pig Only Asset Pool
+			Simplified Arctic Canned Food
+				Beef Only Asset pool
+				Red Pepper Only asset pool
+					Simplified Canned Food
+
+	Construction Menu 
+		Farmer Construction Menu
+			Milk
+			Pig
+			Flour
+			Red Pepper
+		Artisan Construction Menu
+			Aggregators
+				1-3
+		Investor Construction Menu
+			Aggregators
+				4-6
+
+	T1 Grocery foods
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103690500	103690501	103690502	103690503
+
+	T2 Processed foods
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103690600	103690601	103690602	103690603
+	
+	T3 Luxury/Exotic foods
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103690700	103690701	103690702	103690703
+	
+	T1 Agricultural goods
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103690800	103690801	103690802	103690803
+	
+	T2 Advanced Agricultural goods
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103690900	103690901	103690902	103690903
+	
+	T3 Agricultural goods
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103691000	103691001	103691002	103691003
+
+	Tools (Typewriters)
+	[Product]	[Factory]	[ProChain]	[AssetPool]
+	103691200	103691201	103691202	103691203
+	
+
+		Unlock
+			Unlock Aggregates Directly Completely
+						Farmer
+			intermediate moderate 1.0B
+				Unlock
+				Unhide
+			intermediate moderate 1.1B
+				Unlock
+				Unhide
+			intermediate moderate 1.2B
+				Unlock
+				Unhide
+			intermediate moderate 1.3B
+				Unlock
+				Unhide
+							worker
+				intermediate moderate 2.0B
+					Unlock 
+					Unhide Cheese
+				intermediate moderate 2.1B
+					Unlock Cheese
+					Unhide
+				intermediate moderate 2.4B
+					Unlock
+					Unhide Tools (Typewriters) Cheese Canned Fish
+				intermediate moderate 2.5B
+					Unlock Tools (Typewriters) Cheese Canned Fish
+					Unhide
+
+		ItemEffectTargetPool
+			general production targets
+			all food productions
+			boostable working condition list
+
+			ADD TO STANDARD PRODUCT STORAGE-LIST
+
+			ADD TO SPECIFIC PRODUCT-LIST
+
+
+
+
+
+			
+
+			    <GUID>501962</GUID>	<Name>KeywordFilter</Name>
+
+
+
+-->
+
+<ModOps>
+																		<!--  FARMERS consumption -->
+	<ModOp Type="replace" GUID='15000000' Path="/Values/PopulationLevel7/PopulationInputs">
+					  <PopulationInputs>
+						<Item>
+																			<!-- wood  logs -->
+							<Product>120008</Product>
+							<Amount>0.0000854700</Amount>
+							<SupplyWeight>2</SupplyWeight>
+							<MoneyValue>10</MoneyValue>
+						</Item>
+											<Item>
+																			<!-- fish -->
+												<Product>1010200</Product>
+												<Amount>0.0004166667</Amount>
+												<SupplyWeight>2</SupplyWeight>
+												<MoneyValue>10</MoneyValue>
+												<FullWeightPopulationCount>75</FullWeightPopulationCount>
+												<NoWeightPopulationCount>29</NoWeightPopulationCount>
+											</Item>
+						<Item>
+																			<!-- milk -->
+							<Product>1440005</Product>
+							<Amount>0.0004166667</Amount>
+							<SupplyWeight>3</SupplyWeight>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>100</FullWeightPopulationCount>
+							<NoWeightPopulationCount>49</NoWeightPopulationCount>
+						</Item>
+											<Item>
+																			<!-- potatos -->
+											  <Product>1010195</Product>
+											  <Amount>0.000341880</Amount>
+											  <SupplyWeight>3</SupplyWeight>
+											  <MoneyValue>10</MoneyValue>
+											  <FullWeightPopulationCount>150</FullWeightPopulationCount>
+											  <NoWeightPopulationCount>99</NoWeightPopulationCount>
+											</Item>
+						
+							<!-- farmer needs -->
+													<!-- luxuries -->
+													
+						<Item>
+																						<!-- wool -->
+                          <Product>1010197</Product>
+                          <Amount>0.000277778</Amount>
+                          <HappinessValue>4</HappinessValue>
+                          <MoneyValue>10</MoneyValue>
+						  <FullWeightPopulationCount>75</FullWeightPopulationCount>
+						  <NoWeightPopulationCount>34</NoWeightPopulationCount>
+                        </Item>
+													<Item>
+																						<!-- pig -->
+													  <Product>1010199</Product>
+													  <Amount>0.000170940</Amount>
+													  <HappinessValue>4</HappinessValue>
+													  <MoneyValue>10</MoneyValue>
+													  <FullWeightPopulationCount>100</FullWeightPopulationCount>
+													  <NoWeightPopulationCount>74</NoWeightPopulationCount>
+													</Item>
+						<Item>
+																						<!-- flour -->
+							<Product>1010235</Product>
+							<Amount>0.0000854700</Amount>
+							<HappinessValue>4</HappinessValue>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>125</FullWeightPopulationCount>
+							<NoWeightPopulationCount>99</NoWeightPopulationCount>
+						</Item>
+													<Item>
+																						<!-- schnapps -->
+														<Product>1010216</Product>
+														<Amount>0.000277778</Amount>
+														<HappinessValue>4</HappinessValue>
+														<MoneyValue>10</MoneyValue>
+														<FullWeightPopulationCount>150</FullWeightPopulationCount>
+														<NoWeightPopulationCount>124</NoWeightPopulationCount>
+													</Item>                     
+						<Item>
+																						<!-- red peppers  -->
+							<Product>1010198</Product>
+							<Amount>0.00009094</Amount>
+							<HappinessValue>4</HappinessValue>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>199</FullWeightPopulationCount>
+							<NoWeightPopulationCount>149</NoWeightPopulationCount>
+						</Item>
+													<Item>
+																						<!-- pub -->
+														<Product>1010349</Product>
+														<HappinessValue>4</HappinessValue>
+														<MoneyValue>10</MoneyValue>
+														<FullWeightPopulationCount>249</FullWeightPopulationCount>
+														<NoWeightPopulationCount>199</NoWeightPopulationCount>
+													</Item>
+					  </PopulationInputs>
+    </ModOp>
+												<!-- END of FARMERS Needs luxuries -->
+	
+																			<!-- worker consumption -->
+	
+	<ModOp Type="replace" GUID='15000001' Path="/Values/PopulationLevel7/PopulationInputs">
+		<PopulationInputs>
+						<Item>
+																						<!-- fish -->
+							<Product>1010200</Product>
+							<Amount>0.0004166667</Amount>
+							<SupplyWeight>2</SupplyWeight>
+							<MoneyValue>10</MoneyValue>
+						</Item>
+													<Item>
+																						<!-- milk -->
+														<Product>1440005</Product>
+														<Amount>0.0004166667</Amount>
+														<SupplyWeight>2</SupplyWeight>
+														<MoneyValue>10</MoneyValue>
+													</Item>
+						<Item>
+																						<!-- potatos -->
+							<Product>1010195</Product>
+							<Amount>0.000341880</Amount>
+							<SupplyWeight>3</SupplyWeight>
+							<MoneyValue>10</MoneyValue>
+						</Item>
+													<Item>
+																						<!-- wool -->
+														<Product>1010197</Product>
+														<Amount>0.000277778</Amount>
+														<SupplyWeight>3</SupplyWeight>
+														<MoneyValue>10</MoneyValue>
+													</Item>
+						<Item>
+																						<!-- pig -->
+							<Product>1010199</Product>
+							<Amount>0.000170940</Amount>
+							<SupplyWeight>2</SupplyWeight>
+							<MoneyValue>15</MoneyValue>
+						</Item>
+													<Item>
+																						<!-- flour -->
+														<Product>1010235</Product>
+														<Amount>0.0000854700</Amount>
+														<SupplyWeight>3</SupplyWeight>
+														<MoneyValue>20</MoneyValue>
+														<FullWeightPopulationCount>400</FullWeightPopulationCount>
+														<NoWeightPopulationCount>249</NoWeightPopulationCount>
+													</Item>
+						<Item>
+																						<!-- tools -->
+							<Product>1500010153</Product>
+							<Amount>0.00025641</Amount>
+							<SupplyWeight>3</SupplyWeight>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>550</FullWeightPopulationCount>
+							<NoWeightPopulationCount>399</NoWeightPopulationCount>
+						</Item>
+													<Item>
+																						<!-- church -->
+														<Product>1010350</Product>
+														<SupplyWeight>2</SupplyWeight>
+														<FullWeightPopulationCount>650</FullWeightPopulationCount>
+														<NoWeightPopulationCount>499</NoWeightPopulationCount>
+													</Item>
+
+													<!-- END of worker needs -->
+																						<!-- luxuries -->
+
+						<Item>
+																							<!-- schnapps -->
+							<Product>1010216</Product>
+							<Amount>0.0008811112</Amount>
+							<HappinessValue>3</HappinessValue>
+							<MoneyValue>15</MoneyValue>
+						</Item>
+																	<Item>
+																							<!-- pub -->
+																		<Product>1010349</Product>
+																		<HappinessValue>3</HappinessValue>
+																	</Item>
+						<Item>
+																							<!-- red peppers  -->
+							<Product>1010198</Product>
+							<Amount>0.00015094</Amount>
+							<HappinessValue>3</HappinessValue>
+							<MoneyValue>15</MoneyValue>
+						</Item>
+																	<Item>
+																							<!-- work clothes -->
+																		<Product>1010237</Product>
+																		<Amount>0.00028889</Amount>
+																		<HappinessValue>2</HappinessValue>
+																		<MoneyValue>20</MoneyValue>
+																		<FullWeightPopulationCount>50</FullWeightPopulationCount>
+																	</Item>
+						<Item>
+																							<!-- beef -->
+							<Product>1010193</Product>
+							<Amount>0.00028889</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>20</MoneyValue>
+							<FullWeightPopulationCount>150</FullWeightPopulationCount>
+						</Item>
+																	<Item>
+																							<!-- cheese  -->
+																		<Product>1500010102</Product>
+																		<Amount>0.00017094</Amount>
+																		<HappinessValue>3</HappinessValue>
+																		<MoneyValue>50</MoneyValue>
+																		<FullWeightPopulationCount>200</FullWeightPopulationCount>
+																	</Item>
+						<Item>
+																							<!-- sausage -->
+							<Product>1010238</Product>
+							<Amount>0.000333334</Amount>
+							<HappinessValue>3</HappinessValue>
+							<MoneyValue>30</MoneyValue>
+							<FullWeightPopulationCount>300</FullWeightPopulationCount>
+						</Item>
+																	<Item>
+																							<!-- bread -->
+																		<Product>1010213</Product>
+																		<Amount>0.0000854700</Amount>
+																		<HappinessValue>3</HappinessValue>
+																		<MoneyValue>20</MoneyValue>
+																		<FullWeightPopulationCount>400</FullWeightPopulationCount>
+																		<NoWeightPopulationCount>149</NoWeightPopulationCount>
+																	</Item>
+						<Item>
+																							<!-- soap -->
+							<Product>1010203</Product>
+							<Amount>0.000138889</Amount>
+							<HappinessValue>3</HappinessValue>
+							<MoneyValue>20</MoneyValue>
+							<FullWeightPopulationCount>600</FullWeightPopulationCount>
+							<NoWeightPopulationCount>299</NoWeightPopulationCount>
+						</Item>
+																	<Item>
+																							<!-- beer -->
+																		<Product>1010214</Product>
+																		<Amount>0.0000854700</Amount>
+																		<HappinessValue>3</HappinessValue>
+																		<MoneyValue>40</MoneyValue>
+																		<FullWeightPopulationCount>500</FullWeightPopulationCount>
+																		<NoWeightPopulationCount>249</NoWeightPopulationCount>
+																	</Item>
+						<Item>
+																							<!-- school -->
+							<Product>1010351</Product>
+							<HappinessValue>3</HappinessValue>
+						</Item>
+		</PopulationInputs>
+	</ModOp>
+												<!-- END of WORKERS Needs luxuries -->
+					
+																				<!-- artisan consumption -->
+	<ModOp Type="replace" GUID='15000002' Path="/Values/PopulationLevel7/PopulationInputs">
+		<PopulationInputs>
+			<Item>
+																							<!-- fish -->
+				<Product>1010200</Product>
+				<Amount>0.0004166667</Amount>
+				<SupplyWeight>2</SupplyWeight>
+				<MoneyValue>10</MoneyValue>
+			</Item>
+										<Item>
+																							<!-- milk -->
+											<Product>1440005</Product>
+											<Amount>0.0004166667</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>10</MoneyValue>
+										</Item>
+																	<Item>
+																							<!-- potatos -->
+																		<Product>1010195</Product>
+																		<Amount>0.000341880</Amount>
+																		<SupplyWeight>2</SupplyWeight>
+																		<MoneyValue>10</MoneyValue>
+																	</Item>
+			<Item>
+																							<!-- wool -->
+				<Product>1010197</Product>
+				<Amount>0.000277778</Amount>
+				<SupplyWeight>2</SupplyWeight>
+				<MoneyValue>10</MoneyValue>
+			</Item>
+										<Item>
+																							<!-- Work Clothes -->
+											<Product>1010237</Product>
+											<Amount>0.000512821</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>10</MoneyValue>
+										</Item>
+																	<Item>
+																							<!-- sausage -->
+																		<Product>1010238</Product>
+																		<Amount>0.0000854700</Amount>
+																		<SupplyWeight>2</SupplyWeight>
+																		<MoneyValue>10</MoneyValue>
+																	</Item>
+			<Item>
+																							<!-- cheese  -->
+				<Product>1500010102</Product>
+				<Amount>0.000666667</Amount>
+				<SupplyWeight>2</SupplyWeight>
+				<MoneyValue>20</MoneyValue>
+			</Item>
+										<Item>
+																							<!-- Bread  -->
+										<Product>1010213</Product>
+										<Amount>0.000606061</Amount>
+										<SupplyWeight>2</SupplyWeight>
+										<MoneyValue>20</MoneyValue>
+										</Item>
+																	<Item>
+																							<!-- soap -->
+																		<Product>1010203</Product>
+																		<Amount>0.000138889</Amount>
+																		<SupplyWeight>2</SupplyWeight>
+																		<MoneyValue>20</MoneyValue>
+																		<FullWeightPopulationCount>150</FullWeightPopulationCount>
+																	</Item>
+			<Item>
+																							<!-- clay -->
+				<Product>1010201</Product>
+				<Amount>0.000277778</Amount>
+				<SupplyWeight>2</SupplyWeight>
+				<MoneyValue>20</MoneyValue>
+				<FullWeightPopulationCount>200</FullWeightPopulationCount>
+				<NoWeightPopulationCount>99</NoWeightPopulationCount>
+			</Item>
+										<Item>
+																							<!-- goulash -->
+											<Product>1010215</Product>
+											<Amount>0.000277778</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>20</MoneyValue>
+											<FullWeightPopulationCount>250</FullWeightPopulationCount>
+											<NoWeightPopulationCount>149</NoWeightPopulationCount>
+										</Item>
+																	<Item>
+																							<!-- Sewing Machines -->
+																		<Product>1010206</Product>
+																		<Amount>0.00047619</Amount>
+																		<SupplyWeight>2</SupplyWeight>
+																		<MoneyValue>30</MoneyValue>
+																		<FullWeightPopulationCount>500</FullWeightPopulationCount>
+																		<NoWeightPopulationCount>249</NoWeightPopulationCount>
+																	</Item>
+			<Item>
+																							<!-- cotton fabric -->
+				<Product>1010240</Product>
+				<Amount>0.000444444</Amount>
+				<SupplyWeight>2</SupplyWeight>   
+				<MoneyValue>30</MoneyValue>
+				<FullWeightPopulationCount>750</FullWeightPopulationCount>
+				<NoWeightPopulationCount>499</NoWeightPopulationCount>
+			</Item>
+										<Item>
+																							<!-- canned fish -->
+											<Product>1500010120</Product>
+											<Amount>0.000952381</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>30</MoneyValue>
+											<FullWeightPopulationCount>1000</FullWeightPopulationCount>
+											<NoWeightPopulationCount>749</NoWeightPopulationCount>
+										</Item>
+																	<Item>
+																							<!-- University -->
+																		<Product>1010353</Product>
+																		<SupplyWeight>2</SupplyWeight>
+																		<FullWeightPopulationCount>1500</FullWeightPopulationCount>
+																		<NoWeightPopulationCount>999</NoWeightPopulationCount>
+																	</Item>
+						
+																<!-- artisan consumption -->
+																							<!-- luxuries -->
+						<Item>
+																							<!-- Schnapps -->
+							<Product>1010216</Product>
+							<Amount>0.000555556</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>10</MoneyValue>
+						</Item>
+															<Item>
+																							<!-- pub -->
+															<Product>1010349</Product>
+															<HappinessValue>2</HappinessValue>
+															<MoneyValue>10</MoneyValue>
+															</Item>
+						<Item>
+																							<!-- Beer -->
+							<Product>1010214</Product>
+							<Amount>0.000512821</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>60</MoneyValue>
+						</Item>
+															<Item>
+																							<!-- Church  -->
+																<Product>1010350</Product>
+																<HappinessValue>2</HappinessValue>
+															</Item>
+						<Item>
+																							<!-- Rum -->
+							<Product>1010257</Product>
+							<Amount>0.000238095</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>110</MoneyValue>
+						</Item>
+															<Item>
+																							<!-- school -->
+																<Product>1010351</Product>
+																<HappinessValue>2</HappinessValue>
+															</Item>
+						<Item>
+																							<!-- agricultural goods -->
+							<Product>103690800</Product>
+							<Amount>0.0000854700</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>1500</FullWeightPopulationCount>
+							<NoWeightPopulationCount>1249</NoWeightPopulationCount>
+						</Item>
+															<Item>
+																							<!-- bombins -->
+																<Product>120037</Product>
+																<Amount>0.0000854700</Amount>
+																<HappinessValue>2</HappinessValue>
+																<MoneyValue>10</MoneyValue>
+																<FullWeightPopulationCount>1750</FullWeightPopulationCount>
+																<NoWeightPopulationCount>1499</NoWeightPopulationCount>
+															</Item>
+						<Item>
+																							<!-- linen -->
+							<Product>114391</Product>
+							<Amount>0.0000854700</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>2250</FullWeightPopulationCount>
+							<NoWeightPopulationCount>1749</NoWeightPopulationCount>
+						</Item>
+															<Item>
+																							<!-- advanced agricultural goods -->
+																<Product>103690900</Product>
+																<Amount>0.0000854700</Amount>
+																<HappinessValue>2</HappinessValue>
+																<MoneyValue>10</MoneyValue>
+																<FullWeightPopulationCount>2500</FullWeightPopulationCount>
+																<NoWeightPopulationCount>1999</NoWeightPopulationCount>
+															</Item>
+						<Item>
+																							<!-- extra advanced agricultural goods -->
+							<Product>103691000</Product>
+							<Amount>0.000130719</Amount>
+							<HappinessValue>2</HappinessValue>
+							<MoneyValue>10</MoneyValue>
+							<FullWeightPopulationCount>2750</FullWeightPopulationCount>
+							<NoWeightPopulationCount>2249</NoWeightPopulationCount>
+						</Item>
+															<Item>
+																							<!-- Variety Theatre -->
+																<Product>1010352</Product>
+																<HappinessValue>2</HappinessValue>
+																<MoneyValue>10</MoneyValue>
+																<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+																<NoWeightPopulationCount>2499</NoWeightPopulationCount>
+															</Item>
+					</PopulationInputs>
+	</ModOp>
+												<!-- END of ARTISANS needs luxuries -->
+
+					
+																					<!-- Engineers consumption -->
+	<ModOp Type="replace" GUID='15000003' Path="/Values/PopulationLevel7/PopulationInputs">
+						<PopulationInputs>
+							<Item>
+																										<!-- fish -->
+								<Product>1010200</Product>
+								<Amount>0.0004166667</Amount>
+								<SupplyWeight>2</SupplyWeight>
+								<MoneyValue>10</MoneyValue>
+							</Item>
+														<Item>
+																										<!-- potatos -->
+															<Product>1010195</Product>
+															<Amount>0.000341880</Amount>
+															<SupplyWeight>2</SupplyWeight>
+															<MoneyValue>10</MoneyValue>
+														</Item>
+							<Item>
+																										<!-- milk -->
+								<Product>1440005</Product>
+								<Amount>0.0004166667</Amount>
+								<SupplyWeight>2</SupplyWeight>
+								<MoneyValue>10</MoneyValue>
+							</Item>
+														<Item>
+																										<!-- Work Clothes -->
+														<Product>1010237</Product>
+														<Amount>0.000512821</Amount>
+														<SupplyWeight>2</SupplyWeight>
+														<MoneyValue>10</MoneyValue>
+														</Item>
+							<Item>
+																										<!-- Soap -->
+								<Product>1010203</Product>
+								<Amount>0.000277778</Amount>
+								<SupplyWeight>2</SupplyWeight>
+								<MoneyValue>20</MoneyValue>
+							</Item>
+														<Item>
+																										<!-- School -->
+															<Product>1010351</Product>
+															<SupplyWeight>1</SupplyWeight>
+														</Item>
+							<Item>
+																										<!-- sausage -->
+							  <Product>1010238</Product>
+							  <Amount>0.000334700</Amount>
+							  <SupplyWeight>2</SupplyWeight>
+							  <MoneyValue>10</MoneyValue>
+							</Item>
+														<Item>
+																										<!-- cheese  -->
+															<Product>1500010102</Product>
+															<Amount>0.000666667</Amount>
+															<SupplyWeight>2</SupplyWeight>
+															<MoneyValue>20</MoneyValue>
+														</Item>
+							<Item>
+																										<!-- Bread  -->
+							<Product>1010213</Product>
+							<Amount>0.000606061</Amount>
+							<SupplyWeight>2</SupplyWeight>
+							<MoneyValue>20</MoneyValue>
+							</Item>
+														<Item>
+																										<!-- University -->
+																<Product>1010353</Product>
+																<SupplyWeight>1</SupplyWeight>
+														</Item>
+							<Item>
+																										<!-- Canned Food  -->
+								<Product>1010217</Product>
+								<Amount>0.00034188</Amount>
+								<SupplyWeight>2</SupplyWeight>
+								<MoneyValue>20</MoneyValue>
+								<FullWeightPopulationCount>500</FullWeightPopulationCount>
+							</Item>
+														<Item>
+																										<!-- suits -->
+															<Product>1500010127</Product>
+															<Amount>0.0003</Amount>
+															<SupplyWeight>2</SupplyWeight>
+															<MoneyValue>25</MoneyValue>
+															<FullWeightPopulationCount>750</FullWeightPopulationCount>
+															<NoWeightPopulationCount>499</NoWeightPopulationCount>
+														</Item>
+							<Item>
+																										<!-- paper -->
+							  <Product>117702</Product>
+							  <Amount>0.00048148</Amount>
+							  <SupplyWeight>2</SupplyWeight>
+							  <MoneyValue>20</MoneyValue>
+							  <FullWeightPopulationCount>900</FullWeightPopulationCount>
+							  <NoWeightPopulationCount>649</NoWeightPopulationCount>
+							</Item>
+														<Item>
+																										<!-- fried plantains -->
+															<Product>120033</Product>
+															<Amount>0.000208333</Amount>
+															<SupplyWeight>2</SupplyWeight>
+															<MoneyValue>35</MoneyValue>
+															<FullWeightPopulationCount>1000</FullWeightPopulationCount>
+															<NoWeightPopulationCount>749</NoWeightPopulationCount>
+														</Item>
+							<Item>
+																										<!-- Glasses -->
+								<Product>120030</Product>
+								<Amount>0.000148148</Amount>
+								<SupplyWeight>2</SupplyWeight>
+								<MoneyValue>50</MoneyValue>
+								<FullWeightPopulationCount>1250</FullWeightPopulationCount>
+								<NoWeightPopulationCount>899</NoWeightPopulationCount>
+							</Item>
+														<Item>
+																										<!-- typewriters -->
+															<Product>135230</Product>
+															<Amount>0.000118148</Amount>
+															<SupplyWeight>2</SupplyWeight>
+															<MoneyValue>60</MoneyValue>
+															<FullWeightPopulationCount>1500</FullWeightPopulationCount>
+															<NoWeightPopulationCount>999</NoWeightPopulationCount>
+														</Item>
+							<Item>
+																										<!-- Coffee -->
+								<Product>120032</Product>
+								<Amount>0.000392157</Amount>
+								<SupplyWeight>3</SupplyWeight>
+								<MoneyValue>35</MoneyValue>
+								<FullWeightPopulationCount>1750</FullWeightPopulationCount>
+								<NoWeightPopulationCount>1249</NoWeightPopulationCount>
+							</Item>
+														<Item>
+																										<!-- clay pipes -->
+															<Product>114414</Product>
+															<Amount>0.00017</Amount>
+															<SupplyWeight>3</SupplyWeight>
+															<MoneyValue>25</MoneyValue>
+															<FullWeightPopulationCount>2000</FullWeightPopulationCount>
+															<NoWeightPopulationCount>1749</NoWeightPopulationCount>
+														</Item>
+							<Item>
+																										<!-- Electricity -->
+								<Product>1010354</Product>
+								<SupplyWeight>2</SupplyWeight>
+								<FullWeightPopulationCount>2250</FullWeightPopulationCount>
+								<NoWeightPopulationCount>1999</NoWeightPopulationCount>
+							</Item>
+														<Item>
+																										<!-- Light Bulbs -->
+															<Product>1010208</Product>
+															<Amount>0.000208333</Amount>
+															<SupplyWeight>2</SupplyWeight>
+															<MoneyValue>55</MoneyValue>
+															<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+															<NoWeightPopulationCount>2499</NoWeightPopulationCount>
+														</Item>
+							<Item>
+																										<!-- Department Store -->
+								<Product>135108</Product>
+								<RequiredFloorLevel>1</RequiredFloorLevel>
+							</Item>
+															<Item>
+																										<!-- Chewing gum -->
+																<Product>135186</Product>
+																<Amount>0.0000866666</Amount>
+																<MoneyValue>43</MoneyValue>
+																<RequiredFloorLevel>2</RequiredFloorLevel>
+															</Item>
+																							<Item>
+																										<!-- Furniture Store -->
+																								<Product>135107</Product>
+																								<RequiredFloorLevel>2</RequiredFloorLevel>
+																							</Item>
+							<Item>
+																										<!-- lemonade -->
+								<Product>133185</Product>
+								<Amount>0.000208333</Amount>
+								<MoneyValue>60</MoneyValue>
+								<RequiredFloorLevel>3</RequiredFloorLevel>
+							</Item>
+															<Item>
+																										<!-- Drug Store -->
+																<Product>135109</Product>
+																<RequiredFloorLevel>3</RequiredFloorLevel>
+															</Item>
+																							<Item>
+																										<!-- Violins -->
+																								<Product>135233</Product>
+																								<Amount>0.00005</Amount>
+																								<MoneyValue>72</MoneyValue>
+																								<RequiredFloorLevel>3</RequiredFloorLevel>
+																							</Item>
+						  
+											<!-- Engineers NEEDS end-->
+											
+																	<!-- Engineers luxury start -->
+							<Item>
+																								<!-- Beer -->
+								<Product>1010214</Product>
+								<Amount>0.000512821</Amount>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>40</MoneyValue>
+							</Item>
+															<Item>
+																								<!-- Church  -->
+																<Product>1010350</Product>
+																<HappinessValue>2</HappinessValue>
+															</Item>
+							<Item>
+																								<!-- Rum -->
+								<Product>1010257</Product>
+								<Amount>0.000238095</Amount>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>70</MoneyValue>
+							</Item>
+																<Item>
+																								<!-- Variety Theatre -->
+																  <Product>1010352</Product>
+																  <HappinessValue>2</HappinessValue>
+																</Item>
+							<Item>
+																								<!-- Fur Coats -->
+								<Product>1010247</Product>
+								<Amount>0.000666</Amount>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>80</MoneyValue>
+							</Item>
+																<Item>
+																								<!-- tortillas -->
+																	<Product>120035</Product>
+																	<Amount>0.000208333</Amount>
+																	<HappinessValue>2</HappinessValue>
+																	<MoneyValue>60</MoneyValue>
+																	<FullWeightPopulationCount>2000</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>1749</NoWeightPopulationCount>
+																</Item>
+							<Item>
+																								<!-- extra advanced agricultural -->
+								<Product>103691000</Product>
+								<Amount>0.0000454700</Amount>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>40</MoneyValue>
+								<FullWeightPopulationCount>1600</FullWeightPopulationCount>
+								<NoWeightPopulationCount>1199</NoWeightPopulationCount>
+							</Item>
+																<Item>
+																								<!-- Penny Farthings -->
+																	<Product>1010245</Product>
+																	<Amount>0.000208333</Amount>
+																	<HappinessValue>2</HappinessValue>
+																	<MoneyValue>60</MoneyValue>
+																	<FullWeightPopulationCount>2500</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>1499</NoWeightPopulationCount>
+																</Item>
+							<Item>
+																								<!-- dried meat -->
+								<Product>114359</Product>
+								<Amount>0.000276667</Amount>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>60</MoneyValue>
+								<FullWeightPopulationCount>2750</FullWeightPopulationCount>
+								<NoWeightPopulationCount>1749</NoWeightPopulationCount>
+							</Item>
+																<Item>
+																								<!-- Pocket Watches -->
+																	<Product>1010246</Product>
+																	<Amount>0.000130719</Amount>
+																	<HappinessValue>2</HappinessValue>
+																	<MoneyValue>80</MoneyValue>
+																	<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>1999</NoWeightPopulationCount>
+																</Item>
+							<Item>
+																								<!-- chocolate -->
+								<Product>1010258</Product>
+								<Amount>0.0002833</Amount>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>80</MoneyValue>
+								<FullWeightPopulationCount>3500</FullWeightPopulationCount>
+								<NoWeightPopulationCount>2499</NoWeightPopulationCount>
+							</Item>
+																<Item>
+																								<!-- hibiscus tea -->
+																	<Product>114390</Product>
+																	<Amount>0.000108333</Amount>
+																	<HappinessValue>2</HappinessValue>
+																	<MoneyValue>80</MoneyValue>
+																	<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>2999</NoWeightPopulationCount>
+																</Item>
+							<Item>
+																								<!-- Bank -->
+								<Product>1010356</Product>
+								<HappinessValue>2</HappinessValue>
+								<MoneyValue>50</MoneyValue>
+								<FullWeightPopulationCount>6500</FullWeightPopulationCount>
+								<NoWeightPopulationCount>4999</NoWeightPopulationCount>
+							</Item>
+																<Item>
+																								<!-- telephones -->
+																	<Product>114431</Product>
+																	<Amount>0.000104123</Amount>
+																	<HappinessValue>2</HappinessValue>
+																	<MoneyValue>30</MoneyValue>
+																	<FullWeightPopulationCount>8000</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>6999</NoWeightPopulationCount>
+																</Item>
+						</PopulationInputs>
+	</ModOp>
+										 		<!-- END of ENGINEERS Needs luxuries -->
+
+																						<!-- Investors consumption -->
+	<ModOp Type="replace" GUID='15000004' Path="/Values/PopulationLevel7/PopulationInputs">
+				<PopulationInputs>
+					<Item>
+																					<!-- grocery  -->
+						<Product>103690500</Product>
+						<Amount>0.00061</Amount>
+						<SupplyWeight>3</SupplyWeight>
+						<MoneyValue>4</MoneyValue>
+					</Item>
+										<Item>
+																					<!-- processed food -->
+											<Product>103690600</Product>
+											<Amount>0.0005</Amount>
+											<SupplyWeight>3</SupplyWeight>
+											<MoneyValue>6</MoneyValue>
+										</Item>
+																<Item>
+																					<!-- University -->
+																	<Product>1010353</Product>
+																	<SupplyWeight>2</SupplyWeight>
+																</Item>
+					<Item>
+																					<!-- canned food -->
+						<Product>1010217</Product>
+						<Amount>0.00061</Amount>
+						<SupplyWeight>2</SupplyWeight>
+						<MoneyValue>24</MoneyValue>
+					</Item>
+										<Item>
+																					<!-- Fur Coats -->
+											<Product>1010247</Product>
+											<Amount>0.0007</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>96</MoneyValue>
+										</Item>
+																<Item>
+																					<!-- Glasses -->
+																	<Product>120030</Product>
+																	<Amount>0.000296296</Amount>
+																	<SupplyWeight>8</SupplyWeight>
+																	<MoneyValue>100</MoneyValue>
+																</Item>
+					<Item>
+																					<!-- Coffee -->
+						<Product>120032</Product>
+						<Amount>0.001</Amount>
+						<SupplyWeight>4</SupplyWeight>
+						<MoneyValue>80</MoneyValue>
+					</Item>
+										<Item>
+																					<!-- Light Bulbs -->
+											<Product>1010208</Product>
+											<Amount>0.000416667</Amount>
+											<SupplyWeight>4</SupplyWeight>
+											<MoneyValue>140</MoneyValue>
+										</Item>
+																<Item>
+																					<!-- Electricity -->
+																	<Product>1010354</Product>
+																	<SupplyWeight>6</SupplyWeight>
+																</Item>
+					<Item>
+																					<!-- exotic food -->
+						<Product>103690700</Product>
+						<Amount>0.000085</Amount>
+						<SupplyWeight>2</SupplyWeight>
+						<MoneyValue>50</MoneyValue>
+						<FullWeightPopulationCount>750</FullWeightPopulationCount>
+						<NoWeightPopulationCount>249</NoWeightPopulationCount>
+					</Item>
+										<Item>
+																					<!-- Champagne -->
+											<Product>120016</Product>
+											<Amount>0.000352</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>50</MoneyValue>
+											<FullWeightPopulationCount>1000</FullWeightPopulationCount>
+											<NoWeightPopulationCount>499</NoWeightPopulationCount>
+										</Item>
+																<Item>
+																					<!-- Shampoo -->
+																	<Product>133181</Product>
+																	<Amount>0.00015037</Amount>
+																	<SupplyWeight>2</SupplyWeight>
+																	<MoneyValue>50</MoneyValue>
+																	<FullWeightPopulationCount>1500</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>749</NoWeightPopulationCount>
+																</Item>
+					<Item>
+																					<!-- Tailored suits -->
+						<Product>114430</Product>
+						<Amount>0.00028037</Amount>
+						<SupplyWeight>2</SupplyWeight>
+						<MoneyValue>50</MoneyValue>
+						<FullWeightPopulationCount>1750</FullWeightPopulationCount>
+						<NoWeightPopulationCount>999</NoWeightPopulationCount>
+					</Item>
+										<Item>
+																					<!-- Cigars -->
+											<Product>1010259</Product>
+											<Amount>0.00024</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>50</MoneyValue>
+											<FullWeightPopulationCount>2000</FullWeightPopulationCount>
+											<NoWeightPopulationCount>1249</NoWeightPopulationCount>
+										</Item>
+																<Item>
+																					<!-- Telephone -->
+																	<Product>114431</Product>
+																	<Amount>0.0002</Amount>
+																	<SupplyWeight>2</SupplyWeight>
+																	<MoneyValue>50</MoneyValue>
+																	<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+																	<NoWeightPopulationCount>1749</NoWeightPopulationCount>
+																</Item>
+					<Item>
+																					<!-- Tapestries -->
+						<Product>114404</Product>
+						<Amount>0.00020</Amount>
+						<SupplyWeight>2</SupplyWeight>
+						<MoneyValue>50</MoneyValue>
+						<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+						<NoWeightPopulationCount>2499</NoWeightPopulationCount>
+					</Item>
+										<Item>
+																					<!-- Steam Carriages -->
+											<Product>1010225</Product>
+											<Amount>0.000111111</Amount>
+											<SupplyWeight>2</SupplyWeight>
+											<MoneyValue>300</MoneyValue>
+											<FullWeightPopulationCount>5000</FullWeightPopulationCount>
+											<NoWeightPopulationCount>4999</NoWeightPopulationCount>
+										</Item>
+																<Item>
+																				<!-- Department Store -->
+																<Product>135108</Product>
+																<RequiredFloorLevel>1</RequiredFloorLevel>
+																</Item>
+					<Item>
+																				<!-- Chewing Gum -->
+						<Product>135186</Product>
+						<Amount>0.0000916667</Amount>
+						<MoneyValue>25</MoneyValue>
+						<RequiredFloorLevel>2</RequiredFloorLevel>
+					</Item>
+										<Item>
+																				<!-- Biscuits -->
+										  <Product>135229</Product>
+										  <Amount>0.000446667</Amount>
+										  <MoneyValue>88</MoneyValue>
+										  <RequiredFloorLevel>2</RequiredFloorLevel>
+										</Item>
+																<Item>
+																				<!-- Cognac -->
+																	<Product>135234</Product>
+																	<Amount>0.000183333</Amount>
+																	<MoneyValue>104</MoneyValue>
+																	<RequiredFloorLevel>3</RequiredFloorLevel>
+																</Item>
+					<Item>
+																				<!-- Furniture Store -->
+						<Product>135107</Product>
+						<RequiredFloorLevel>3</RequiredFloorLevel>
+					</Item>
+										<Item>
+																				<!-- Typewriters -->
+										  <Product>135230</Product>
+										  <Amount>0.000233333</Amount>
+										  <MoneyValue>76</MoneyValue>
+										  <RequiredFloorLevel>4</RequiredFloorLevel>
+										</Item>
+																<Item>
+																				<!-- Billiard Tables -->
+																<Product>135232</Product>
+																<Amount>0.000216667</Amount>
+																<MoneyValue>84</MoneyValue>
+																<RequiredFloorLevel>4</RequiredFloorLevel>
+																</Item>
+					<Item>
+																				<!-- Violins -->
+						<Product>135233</Product>
+						<Amount>0.00005</Amount>
+						<MoneyValue>42</MoneyValue>
+						<RequiredFloorLevel>5</RequiredFloorLevel>
+					</Item>
+										<Item>
+																				<!-- Drug Store -->
+											<Product>135109</Product>
+											<RequiredFloorLevel>5</RequiredFloorLevel>
+										</Item>
+																<Item>
+																				<!-- Toys -->
+																<Product>135231</Product>
+																<Amount>0.0000933333</Amount>
+																<MoneyValue>92</MoneyValue>
+																<RequiredFloorLevel>5</RequiredFloorLevel>
+																</Item>
+<Item>
+	<Product>135816</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135876</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135877</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135878</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135879</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135880</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135881</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135882</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135883</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135884</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135885</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135886</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135887</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135888</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+<Item>
+	<Product>135889</Product>
+	<SupplyWeight>100</SupplyWeight>
+	<RequiredToBeBuilding>406</RequiredToBeBuilding>
+	<ExcludePopulationFromMoneyAndConsumptionCalculation>1</ExcludePopulationFromMoneyAndConsumptionCalculation>
+</Item>
+										
+											<!-- Investors' Needs -->
+																	<!-- luxuries -->
+					<Item>
+																								<!-- Beer -->
+						<Product>1010214</Product>
+						<Amount>0.000512821</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>100</MoneyValue>
+					</Item>
+														<Item>
+																								<!-- Church  -->
+															<Product>1010350</Product>
+															<HappinessValue>2</HappinessValue>
+														</Item>
+					<Item>
+																								<!-- Rum -->
+						<Product>1010257</Product>
+						<Amount>0.000238095</Amount>
+						<HappinessValue>4</HappinessValue>
+						<MoneyValue>15</MoneyValue>
+					</Item>
+														<Item>
+																								<!-- Variety Theatre -->
+															<Product>1010352</Product>
+															<HappinessValue>3</HappinessValue>
+														</Item>
+					<Item>
+																								<!-- extra advanced -->
+						<Product>103691000</Product>
+						<Amount>0.0000854700</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>20</MoneyValue>
+						<FullWeightPopulationCount>1600</FullWeightPopulationCount>
+						<NoWeightPopulationCount>1199</NoWeightPopulationCount>
+					</Item>
+														<Item>
+																								<!-- Penny Farthings -->
+															<Product>1010245</Product>
+															<Amount>0.000673333</Amount>
+															<HappinessValue>4</HappinessValue>
+															<MoneyValue>140</MoneyValue>
+														</Item>
+					<Item>
+																								<!-- chocolate -->
+						<Product>1010258</Product>
+						<Amount>0.000673333</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>30</MoneyValue>
+						<FullWeightPopulationCount>3000</FullWeightPopulationCount>
+						<NoWeightPopulationCount>2499</NoWeightPopulationCount>
+					</Item>
+														<Item>
+																								<!-- Pocket Watches -->
+															<Product>1010246</Product>
+															<Amount>0.000261438</Amount>
+															<HappinessValue>2</HappinessValue>
+															<MoneyValue>180</MoneyValue>
+														</Item>
+					<Item>
+																								<!-- lemonade -->
+						<Product>133185</Product>
+						<Amount>0.000158333</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>30</MoneyValue>
+						<FullWeightPopulationCount>5500</FullWeightPopulationCount>
+						<NoWeightPopulationCount>4999</NoWeightPopulationCount>
+					</Item>
+														<Item>
+																								<!-- Bank -->
+															<Product>1010356</Product>
+															<HappinessValue>2</HappinessValue>
+															<MoneyValue>200</MoneyValue>
+														</Item>
+					<Item>
+																								<!-- boots -->
+						<Product>114428</Product>
+						<Amount>0.000250877</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>150</MoneyValue>
+						<FullWeightPopulationCount>1500</FullWeightPopulationCount>
+						<NoWeightPopulationCount>1249</NoWeightPopulationCount>
+					</Item>
+														<Item>
+																								<!-- Members Club -->
+															<Product>1010355</Product>
+															<HappinessValue>5</HappinessValue>
+															<MoneyValue>50</MoneyValue>
+															<FullWeightPopulationCount>1000</FullWeightPopulationCount>
+															<NoWeightPopulationCount>749</NoWeightPopulationCount>
+														</Item>
+					<Item>
+																								<!-- Jewelry -->
+						<Product>1010250</Product>
+						<Amount>0.000200877</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>250</MoneyValue>
+						<FullWeightPopulationCount>2000</FullWeightPopulationCount>
+						<NoWeightPopulationCount>1749</NoWeightPopulationCount>
+					</Item>
+														<Item>
+																								<!-- Gramophones -->
+															<Product>1010248</Product>
+															<Amount>0.000150877</Amount>
+															<HappinessValue>2</HappinessValue>
+															<MoneyValue>150</MoneyValue>
+															<FullWeightPopulationCount>2500</FullWeightPopulationCount>
+															<NoWeightPopulationCount>1999</NoWeightPopulationCount>
+														</Item>
+					<Item>
+																								<!-- pottery -->
+						<Product>118724</Product>
+						<Amount>0.000080877</Amount>
+						<HappinessValue>2</HappinessValue>
+						<MoneyValue>250</MoneyValue>
+						<FullWeightPopulationCount>2500</FullWeightPopulationCount>
+						<NoWeightPopulationCount>1999</NoWeightPopulationCount>
+					</Item>
+														<Item>
+																								<!-- parkas -->
+															<Product>112700</Product>
+															<Amount>0.000050877</Amount>
+															<HappinessValue>2</HappinessValue>
+															<MoneyValue>250</MoneyValue>
+															<FullWeightPopulationCount>2500</FullWeightPopulationCount>
+															<NoWeightPopulationCount>1999</NoWeightPopulationCount>
+														</Item>
+									
+				</PopulationInputs>
+	</ModOp>
+												<!-- END of INVESTORS Needs luxuries -->
+
+																<!-- END of POPULATION NEEDS  -->
+					
+																			<!--oooooooooooooooooooooooooooooo ASSET pool PROD CHAIN and BUILDINGS tweaking ooooooooooooooooooooooooooooooooo-->
+																			
+						<!-- ADD grain flour only ASSET pool -->	
+		<ModOp Type="addNextSibling" GUID="140028">
+			<Asset>
+				<Template>AssetPool</Template>
+				<Values>
+				<Standard>
+					<GUID>140033369</GUID>
+					<Name>asset pool flour</Name>
+				</Standard>
+				<AssetPool>
+					<AssetList>
+					<Item>
+					<!--[Product] Grain -->
+						<Asset>1010192</Asset>
+					</Item>
+					<Item>
+					<!--[Product] Flour -->
+						<Asset>1010235</Asset>
+					</Item>
+					<Item>
+					<!--[FactoryBuilding7] Flour Mill -->
+						<Asset>1010313</Asset>
+					</Item>
+					<Item>
+					<!--[FarmBuilding] Grain Farm -->
+						<Asset>1010262</Asset>
+					</Item>
+					<Item>
+					<!--[Production chain] flour chain -->
+						<Asset>500004369</Asset>
+					</Item>
+					</AssetList>
+				</AssetPool>
+				</Values>
+			</Asset>
+		</ModOp>
+			
+																				<!-- ADD GrainFlour ProdChain -->
+										<ModOp Type="addNextSibling" GUID="500505">
+											<Asset>
+													<Template>ProductionChain</Template>
+													<Values>
+													<Standard>
+														<GUID>500004369</GUID>
+														<Name>flour chain</Name>
+														<IconFilename>data/ui/2kimages/main/3dicons/icon_flour.png</IconFilename>
+													</Standard>
+													<ProductionChain>
+															<!--[FactoryBuilding7] Flour Mill -->
+														<Building>1010313</Building>
+														<Tier1>
+														<Item>
+																<!--[FarmBuilding] Grain Farm -->
+															<Building>1010262</Building>
+														</Item>
+														</Tier1>
+													</ProductionChain>
+													<Locked/>
+													<Text>
+														<LocaText>
+														<English>
+															<Text>Flour</Text>
+															<Status>Exported</Status>
+															<ExportCount>2</ExportCount>
+														</English>
+														</LocaText>
+														<LineID>14883</LineID>
+													</Text>
+													</Values>
+											</Asset>
+										</ModOp>
+
+												<!-- simplifies Bread asset pool because grain and flour were already unlocked -->
+									
+		<ModOp Type="replace" GUID="140033">
+			<Asset>
+				<Template>AssetPool</Template>
+				<Values>
+					<Standard>
+						<GUID>140033</GUID>
+						<Name>asset pool bread</Name>
+					</Standard>
+					<AssetPool>
+						<AssetList>
+							<Item>
+								<!--[ProductionChain] Bread -->
+								<Asset>500004</Asset>
+							</Item>
+							<Item>
+								<!--[Product] Bread -->
+								<Asset>1010213</Asset>
+							</Item>
+							<Item>
+								<!--[FactoryBuilding7] Bakery -->
+								<Asset>1010291</Asset>
+							</Item>
+						</AssetList>
+					</AssetPool>
+				</Values>
+			</Asset>
+		</ModOp>
+												<!-- mod GRAIN MILL Brick replaced by wool, slower, no electricity-->
+		<ModOp Type="replace" GUID='1010313' >
+			<Asset>
+				<Template>FactoryBuilding7</Template>
+				<Values>
+				<Standard>
+					<GUID>1010313</GUID>
+					<Name>processing_02 (Flour Processing)</Name>
+					<IconFilename>data/ui/2kimages/main/3dicons/icon_flour.png</IconFilename>
+				</Standard>
+				<Building>
+					<BuildModeRandomRotation>180</BuildModeRandomRotation>
+					<AssociatedRegions>Moderate</AssociatedRegions>
+				</Building>
+				<Blocking />
+				<Cost>
+					<Costs>
+					<Item>
+						<!--[Product] Coins -->
+						<Ingredient>1010017</Ingredient>
+						<Amount>500</Amount>
+					</Item>
+					<Item>
+						<!--[Product] Timber -->
+						<Ingredient>1010196</Ingredient>
+						<Amount>4</Amount>
+					</Item>
+					<Item>
+						<!--[Product] wool -->
+						<Ingredient>1010197</Ingredient>
+						<Amount>5</Amount>
+					</Item>
+					</Costs>
+				</Cost>
+				<Object>
+					<Variations>
+					<Item>
+						<Filename>data/graphics/buildings/production/processing_02/processing_02.cfg</Filename>
+					</Item>
+					</Variations>
+				</Object>
+				<Mesh />
+				<Selection>
+					<OnSelection>
+					<IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+					<Values>
+						<ActionList />
+					</Values>
+					</OnSelection>
+					<ParticipantMessageArcheType>Resident_tier01_atWork</ParticipantMessageArcheType>
+					<Colors>
+					<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+					</Colors>
+				</Selection>
+				<Text>
+					<LocaText>
+					<English>
+						<Text>Flour Mill</Text>
+						<Status>Exported</Status>
+						<ExportCount>1</ExportCount>
+					</English>
+					</LocaText>
+					<LineID>5281</LineID>
+				</Text>
+				<Constructable />
+				<Locked />
+				<SoundEmitter>
+					<ActiveSounds>
+					<Item>
+						<Sound>216883</Sound>
+					</Item>
+					<Item>
+						<Sound>203624</Sound>
+					</Item>
+					</ActiveSounds>
+					<IncidentSounds>
+					<InfectedFire>
+						<Item>
+						<Sound>214659</Sound>
+						</Item>
+					</InfectedFire>
+					</IncidentSounds>
+				</SoundEmitter>
+				<FeedbackController>
+					<DefaultFeedbackSequence>Work</DefaultFeedbackSequence>
+					<PauseMeshSequence>1</PauseMeshSequence>
+					<UpdateMeshSequence>0</UpdateMeshSequence>
+				</FeedbackController>
+				<Infolayer />
+				<UpgradeList />
+				<Factory7 />
+				<FactoryBase>
+					<FactoryInputs>
+					<Item>
+						<Product>1010192</Product>
+						<Amount>1</Amount>
+						<StorageAmount>6</StorageAmount>
+					</Item>
+					</FactoryInputs>
+					<FactoryOutputs>
+					<Item>
+						<Product>1010235</Product>
+						<Amount>1</Amount>
+						<StorageAmount>4</StorageAmount>
+					</Item>
+					</FactoryOutputs>
+					<CycleTime>60</CycleTime>
+					<IsMainFactory>1</IsMainFactory>
+				</FactoryBase>
+				<LogisticNode />
+				<AmbientMoodProvider>
+					<Murmur>Factory</Murmur>
+					<DynamicEnvironmentType>None</DynamicEnvironmentType>
+				</AmbientMoodProvider>
+				<Maintenance>
+					<Maintenances>
+					<Item>
+						<Product>1010017</Product>
+						<Amount>50</Amount>
+						<InactiveAmount>25</InactiveAmount>
+					</Item>
+					<Item>
+						<Product>1010052</Product>
+						<Amount>10</Amount>
+					</Item>
+					</Maintenances>
+				</Maintenance>
+				<Attackable>
+					<MaximumHitPoints>1750</MaximumHitPoints>
+					<SelfHealPerHealTick>4</SelfHealPerHealTick>
+				</Attackable>
+				<Pausable />
+				<IncidentInfectable>
+					<Infectable>
+					<Explosion>
+						<Base>0</Base>
+						<Escalated>0</Escalated>
+					</Explosion>
+					</Infectable>
+					<Explosion>
+					<ExplosionCoreDamage>1000</ExplosionCoreDamage>
+					</Explosion>
+					<IncidentInfectionChanceFactors>
+					<Fire>
+						<DensityDistance>20</DensityDistance>
+						<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+						<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+					</Fire>
+					<Riot>
+						<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+						<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+						<FactoryHappinessFactor>0.2</FactoryHappinessFactor>
+						<HappinessThreshold>20</HappinessThreshold>
+					</Riot>
+					</IncidentInfectionChanceFactors>
+				</IncidentInfectable>
+				<Industrializable>
+						<BoostedByIndustrialization>0</BoostedByIndustrialization>
+				</Industrializable>
+				<Culture>
+					<CultureType>Culture</CultureType>
+				</Culture>
+				<QuestObject />
+				<Electrifiable />
+				<EcoSystemProvider />
+				</Values>
+			</Asset>
+		</ModOp>
+							<!-- END of FLOUR Mill  -->
+
+
+																	<!-- ADD pig only ASSET pool -->	
+		<ModOp Type="addNextSibling" GUID="130056">
+			<Asset>
+				<Template>AssetPool</Template>
+				<Values>
+				<Standard>
+					<GUID>140027369</GUID>
+					<Name>asset pool pig</Name>
+				</Standard>
+				<AssetPool>
+					<AssetList>
+					<Item>
+						<!-- [Product] pig -->
+						<Asset>1010199</Asset>
+					</Item>
+					<Item>
+							<!-- [FactoryBuilding7] pig farm -->
+						<Asset>1010269</Asset>
+					</Item>
+					</AssetList>
+				</AssetPool>
+				</Values>
+			</Asset>
+		</ModOp>
+												<!-- Simplifies ARCTIC canned food asset pool to prevent annoying UI bug/glitch regarding beef supposedly unlocked by 300 technicians instead of the new condition -->
+		<ModOp Type="replace" GUID="117267" Path="/Values/AssetPool/AssetList">
+						<AssetList>
+							<Item>
+								<!--[Product] Canned Food -->
+								<Asset>1010217</Asset>
+							</Item>
+						</AssetList>
+		</ModOp>
+												<!-- ADD beef only asset pool -->
+		<ModOp Type="addNextSibling" GUID="130056">
+			<Asset>
+				<Template>AssetPool</Template>
+				<Values>
+				<Standard>
+					<GUID>1010193369</GUID>
+					<Name>asset pool beef</Name>
+				</Standard>
+				<AssetPool>
+					<AssetList>
+					<Item>
+					<!--[Product] beef red meat -->
+						<Asset>1010193</Asset>
+					</Item>
+					<Item>
+					<!--[FactoryBuilding7] cattle farm -->
+						<Asset>1010263</Asset>
+					</Item>
+					</AssetList>
+				</AssetPool>
+				</Values>
+			</Asset>
+		</ModOp>
+
+											<!-- red pepper only ASSET pool -->
+		
+		<ModOp Type="addNextSibling" GUID="130042">
+			<Asset>
+				<Template>AssetPool</Template>
+				<Values>
+				<Standard>
+					<GUID>1010198369</GUID>
+					<Name>asset pool red pepper</Name>
+				</Standard>
+				<AssetPool>
+					<AssetList>
+							<Item>
+							<!--[Product] Red Peppers -->
+								<Asset>1010198</Asset>
+							</Item>
+							<Item>
+							<!--[FarmBuilding] Red Pepper Farm -->
+								<Asset>100654</Asset>
+							</Item>
+					</AssetList>
+				</AssetPool>
+				</Values>
+			</Asset>
+		</ModOp>
+									<!-- simplifies canned food asset pool because beef and red pepper were already unlocked -->
+									
+		<ModOp Type="replace" GUID="140036">
+			<Asset>
+				<Template>AssetPool</Template>
+				<Values>
+					<Standard>
+						<GUID>140036</GUID>
+						<Name>asset pool canned food</Name>
+					</Standard>
+					<AssetPool>
+						<AssetList>
+							<Item>
+								<!--[ProductionChain] Canned Food -->
+								<Asset>500008</Asset>
+							</Item>
+							<Item>
+								<!--[Product] Goulash -->
+								<Asset>1010215</Asset>
+							</Item>
+							<Item>
+								<!--[Product] Canned Food -->
+								<Asset>1010217</Asset>
+							</Item>
+							<Item>
+								<!--[FactoryBuilding7] Artisanal Kitchen -->
+								<Asset>1010293</Asset>
+							</Item>
+							<Item>
+								<!--[FactoryBuilding7] Cannery -->
+								<Asset>1010295</Asset>
+							</Item>
+						</AssetList>
+					</AssetPool>
+				</Values>
+			</Asset>
+		</ModOp>
+		
+															<!-- END of ASSET pool PROD CHAIN and BUILDINGS tweaking -->	
+		
+		
+	
+												<!--oooooooooooooooooooo START of CONSTRUCTION MENU tweaks  ooooooooooooooooooooooooooooooooooooo-->
+
+																						<!-- add to FARMER tier BUILD MENU tab  -->
+										
+	<ModOp Type="addNextSibling" GUID="25000189" Path="/Values/ConstructionCategory/BuildingList/Item[Building='1010358']">
+				<Item>
+									<!-- milk farm -->
+					<Building>1500010104</Building>
+				</Item>
+				<Item>
+									<!-- Pig farm -->
+					<Building>1010269</Building>
+				</Item>
+				<Item>
+								<!--[ProductionChain] Flour chain -->
+					<Building>500004369</Building>
+				</Item>
+				<Item>
+								<!-- red pepper farm -->
+					<Building>100654</Building>
+				</Item>
+	</ModOp>
+
+																<!-- add to Artisan tier BUILD MENU tab -->
+
+	<ModOp Type="add" GUID="25000191" Path="/Values/ConstructionCategory/BuildingList">
+				<Item>
+						<!-- T1 Agricultural Goods chain [ProductionChain] -->
+					<Building>103690802</Building>
+				</Item>
+				<Item>
+						<!-- T2 Agricultural Goods chain [ProductionChain] -->
+					<Building>103690902</Building>
+				</Item>
+				<Item>
+						<!-- T3 Agricultural Goods chain [ProductionChain] -->
+					<Building>103691002</Building>
+				</Item>
+	</ModOp>
+
+																							<!-- add to Ivestor tier BUILD MENU tab -->
+
+			<ModOp Type="add" GUID="500447" Path="/Values/ConstructionCategory/BuildingList">
+				<Item>
+						<!-- grocery chain [ProductionChain] -->
+					<Building>103690502</Building>
+				</Item>
+				<Item>
+						<!-- processed food chain [ProductionChain] -->
+					<Building>103690602</Building>
+				</Item>
+				<Item>
+						<!-- Luxury food chain [ProductionChain] -->
+					<Building>103690702</Building>
+				</Item>
+			</ModOp>
+																<!-- END of construction Menu Tweaks -->
+
+
+
+
+          																	<!-- AGGREGATES -->
+  					<!-- Grocery -->
+					
+																<!-- Grocery [product] -->
+														  
+								 <ModOp GUID="1010195" Type="addNextSibling">
+									<Asset>
+									  <Template>Product</Template>
+									  <Values>
+										<Standard>
+										  <GUID>103690500</GUID>
+										  <!-- Grocery [product] -->
+										  <Name>basic_grocery</Name>
+										  <IconFilename>data/modgraphics/icons/icon_basic_grocery.png</IconFilename>
+										  <InfoDescription>103690509</InfoDescription>
+										</Standard>
+										<Text/>
+										<Locked/>
+										<Product>
+										  <ProductCategory>11704</ProductCategory>
+										  <BasePrice>30</BasePrice>
+										  <CivLevel>1</CivLevel>
+										  <AssociatedRegion>Moderate</AssociatedRegion>
+										  <StorageLevel>Building</StorageLevel>
+										  <ProductionRegions>
+											<Item>
+											  <RegionType>Moderate</RegionType>
+											</Item>
+										  </ProductionRegions>
+										</Product>
+										<ExpeditionAttribute>
+										  <BaseMorale>20</BaseMorale>
+										  <ExpeditionAttributes>
+											<Item>
+											  <Attribute>Melee</Attribute>
+											  <Amount>10</Amount>
+											</Item>
+										  </ExpeditionAttributes>
+										</ExpeditionAttribute>
+									  </Values>
+									</Asset>
+								</ModOp>
+																<!-- grocery store [factory7] -->
+
+			<ModOp GUID="1010195" Type="addNextSibling">
+				<Asset>
+				<Template>FactoryBuilding7</Template>
+					<Values>
+						<Standard>
+						<!-- grocery store [factory7] -->
+						<GUID>103690501</GUID>
+						<Name>grocery store</Name>
+						<IconFilename>data/modgraphics/icons/icon_basic_grocery.png</IconFilename>
+						<InfoDescription>103690508</InfoDescription>
+						</Standard>
+							<Building>
+								<BuildModeRandomRotation>90</BuildModeRandomRotation>
+								<AssociatedRegions>Moderate</AssociatedRegions>
+							</Building>
+					<Blocking/>
+					<Cost>
+						<Costs>
+							<Item>
+								<Ingredient>1010017</Ingredient>
+											<!-- Coins -->
+								<Amount>500</Amount>
+							</Item>
+							<Item>
+								<Ingredient>1010196</Ingredient>
+											<!-- Timber -->
+								<Amount>4</Amount>
+							</Item>
+						</Costs>
+					</Cost>
+						<Object>
+							<Variations>
+								<Item>
+									<Filename>data/graphics/buildings/residence/residence_tier03_estate02/residence_tier03_estate02.cfg</Filename>
+								</Item>
+							</Variations>
+						</Object>
+					<Mesh/>
+						<Selection>
+						<ParticipantMessageArcheType>Resident_tier01_atWork</ParticipantMessageArcheType>
+							<Colors>
+								<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+							</Colors>
+						</Selection>
+					<Text>
+						<LocaText>
+							<English>
+								<Text>Factory</Text>
+								<Status>Exported</Status>
+								<ExportCount>1</ExportCount>
+							</English>
+						</LocaText>
+						<LineID>5316</LineID>
+					</Text>
+					<Constructable/>
+					<Locked/>
+					<SoundEmitter>
+						<ActiveSounds>
+							<Item>
+								<Sound>216877</Sound>
+							</Item>
+							<Item>
+								<Sound>202231</Sound>
+							</Item>
+						</ActiveSounds>
+							<IncidentSounds>
+								<InfectedFire>
+									<Item>
+									<Sound>214659</Sound>
+									</Item>
+								</InfectedFire>
+							</IncidentSounds>
+					</SoundEmitter>
+					<FeedbackController/>
+					<Infolayer/>
+					<UpgradeList/>
+					<Factory7/>
+								<FactoryBase>
+										<FactoryInputs>
+											<Item>
+												<Product>1010200</Product>
+														<!-- Fish -->
+												<Amount>1</Amount>
+												<StorageAmount>4</StorageAmount>
+											</Item>
+											<Item>
+												<Product>1440005</Product>
+														<!-- Milk -->
+												<Amount>1</Amount>
+												<StorageAmount>4</StorageAmount>
+											</Item>
+											<Item>
+												<Product>1010199</Product>
+														<!-- pig -->
+												<Amount>1</Amount>
+												<StorageAmount>4</StorageAmount>
+											</Item>
+											<Item>
+												<Product>1010195</Product>
+														<!-- potato -->
+												<Amount>1</Amount>
+												<StorageAmount>4</StorageAmount>
+											</Item>
+										</FactoryInputs>
+										<FactoryOutputs>
+											<Item>
+												<Product>103690500</Product>
+												<!-- Grocery -->
+												<Amount>4</Amount>
+												<StorageAmount>16</StorageAmount>
+											</Item>
+										</FactoryOutputs>
+									<CycleTime>240</CycleTime>
+									<IsMainFactory>1</IsMainFactory>
+								</FactoryBase>
+					<LogisticNode/>
+					<AmbientMoodProvider/>
+						<Maintenance>
+							<Maintenances>
+								<Item>
+									<Product>1010017</Product>
+									<!-- Coins -->
+									<Amount>40</Amount>
+									<InactiveAmount>20</InactiveAmount>
+								</Item>
+								<Item>
+									<Product>1010116</Product>
+									<!-- Artisan Workforce -->
+									<Amount>10</Amount>
+									<InactiveAmount>5</InactiveAmount>
+								</Item>
+							</Maintenances>
+						</Maintenance>
+					<Industrializable>
+						<MandatoryIndustrialization>0</MandatoryIndustrialization>
+						<BoostedByIndustrialization>0</BoostedByIndustrialization>
+					</Industrializable>
+					<Heated/>
+					<StreetActivation/>
+						<IncidentInfectable>
+							<IncidentInfectionChanceFactors>
+								<Fire>
+									<DensityDistance>20</DensityDistance>
+									<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+									<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+								</Fire>
+								<Riot>
+									<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+									<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+								</Riot>
+							</IncidentInfectionChanceFactors>
+						</IncidentInfectable>
+					</Values>
+				</Asset>
+			</ModOp>
+																<!-- grocery store chain [ProductionChain] -->
+
+					<ModOp GUID="500029" Type="addNextSibling">
+						<Asset>
+						<Template>ProductionChain</Template>
+							<Values>
+								<Standard>
+								<GUID>103690502</GUID>
+								<Name>production chain</Name>
+								<IconFilename>data/modgraphics/icons/icon_basic_grocery.png</IconFilename>
+								<InfoDescription>103690500</InfoDescription>
+								</Standard>
+							<ProductionChain>
+								<!-- grocery store [factory7] -->
+								<Building>103690501</Building>
+									<Tier1>
+										<Item>
+											<Building>1010278</Building>
+											<!-- Fishery -->
+										</Item>
+										<Item>
+											<Building>1010265</Building>
+											<!-- potato farm -->
+										</Item>
+										<Item>
+											<Building>1500010104</Building>
+											<!-- milk farm -->
+										</Item>
+										<Item>
+											<Building>1010269</Building>
+											<!-- pig farm -->
+										</Item>
+									</Tier1>
+							</ProductionChain>
+							<Locked/>
+								<Text>
+									<LocaText>
+										<English>
+										<Text>chain</Text>
+										<Status>Exported</Status>
+										<ExportCount>2</ExportCount>
+										</English>
+									</LocaText>
+								<LineID>14906</LineID>
+								</Text>
+							</Values>
+						</Asset>
+					</ModOp>
+																<!-- Grocery pool [asset pool] -->	
+
+						<ModOp Type="addPrevSibling" GUID="25000244">
+							<Asset>
+							<!-- Grocery ast pool -->
+							<Template>AssetPool</Template>
+								<Values>
+								<Standard>
+								<GUID>103690503</GUID>
+								<Name>asset pool Grocery</Name>
+								</Standard>
+									<AssetPool>
+										<AssetList>  
+											<Item>
+												<!-- Grocery [product] -->
+												<Asset>103690500</Asset>
+											</Item>
+											<Item>
+												<!-- grocery store [factory7] -->
+												<Asset>103690501</Asset>
+											</Item>
+											<Item>
+												<!-- grocery [production chain] -->
+												<Asset>103690502</Asset>
+											</Item>
+										</AssetList>
+									</AssetPool>
+								</Values>
+							</Asset>
+						</ModOp>
+
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+														<!-- Processed food -->
+
+					<!-- Processed food [product] -->
+
+		<ModOp GUID="1010195" Type="addNextSibling">
+			<Asset>
+				<Template>Product</Template>
+				<Values>
+				<Standard>
+					<GUID>103690600</GUID>
+					<!-- Processed food [product] -->
+					<Name>processed_food</Name>
+					<IconFilename>data/modgraphics/icons/icon_food.png</IconFilename>
+					<InfoDescription>103690609</InfoDescription>
+				</Standard>
+				<Text/>
+				<Locked/>
+				<Product>
+					<ProductCategory>11704</ProductCategory>
+					<BasePrice>55</BasePrice>
+					<CivLevel>1</CivLevel>
+					<AssociatedRegion>Moderate</AssociatedRegion>
+					<StorageLevel>Building</StorageLevel>
+					<ProductionRegions>
+					<Item>
+						<RegionType>Moderate</RegionType>
+					</Item>
+					</ProductionRegions>
+				</Product>
+				<ExpeditionAttribute>
+					<BaseMorale>20</BaseMorale>
+					<ExpeditionAttributes>
+					<Item>
+						<Attribute>Faith</Attribute>
+						<Amount>15</Amount>
+					</Item>
+					</ExpeditionAttributes>
+				</ExpeditionAttribute>
+				</Values>
+			</Asset>
+		</ModOp>
+																<!-- Processed food store [factory7] -->
+
+		<ModOp GUID="1010195" Type="addNextSibling">
+			<Asset>
+				<Template>FactoryBuilding7</Template>
+				<Values>
+					<Standard>
+					<!-- Processed food store [factory7] -->
+					<GUID>103690601</GUID>
+					<Name>Processed_food_market</Name>
+					<IconFilename>data/modgraphics/icons/icon_food.png</IconFilename>
+					<InfoDescription>103690608</InfoDescription>
+					</Standard>
+						<Building>
+							<BuildModeRandomRotation>90</BuildModeRandomRotation>
+							<AssociatedRegions>Moderate</AssociatedRegions>
+						</Building>
+					<Blocking/>
+						<Cost>
+							<Costs>
+								<Item>
+									<Ingredient>1010017</Ingredient>
+									<!-- Coins -->
+									<Amount>500</Amount>
+								</Item>
+								<Item>
+									<Ingredient>1010196</Ingredient>
+									<!-- Timber -->
+									<Amount>4</Amount>
+								</Item>
+							</Costs>
+						</Cost>
+						<Object>
+							<Variations>
+								<Item>
+									<Filename>data/graphics/buildings/residence/residence_tier03_estate02/residence_tier03_estate02.cfg</Filename>
+								</Item>
+							</Variations>
+						</Object>
+					<Mesh/>
+						<Selection>
+							<ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+							<Colors>
+								<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+							</Colors>
+						</Selection>
+							<Text>
+								<LocaText>
+									<English>
+									<Text>Factory</Text>
+									<Status>Exported</Status>
+									<ExportCount>1</ExportCount>
+									</English>
+								</LocaText>
+								<LineID>5316</LineID>
+							</Text>
+					<Constructable/>
+					<Locked/>
+						<SoundEmitter>
+								<ActiveSounds>
+									<Item>
+										<Sound>216877</Sound>
+									</Item>
+									<Item>
+										<Sound>202231</Sound>
+									</Item>
+								</ActiveSounds>
+							<IncidentSounds>
+								<InfectedFire>
+									<Item>
+									<Sound>214659</Sound>
+									</Item>
+								</InfectedFire>
+							</IncidentSounds>
+						</SoundEmitter>
+					<FeedbackController/>
+					<Infolayer/>
+					<UpgradeList/>
+					<Factory7/>
+						<FactoryBase>
+								<FactoryInputs>
+									<Item>
+										<Product>1500010102</Product>
+										<!-- cheese -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+									<Item>
+										<Product>1010238</Product>
+										<!-- sausage -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+									<Item>
+										<Product>1010213</Product>
+										<!-- bread -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+									<Item>
+										<Product>1010215</Product>
+										<!-- goulash -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+								</FactoryInputs>
+								<FactoryOutputs>
+									<Item>
+										<Product>103690600</Product>
+										<!-- Processed food -->
+										<Amount>4</Amount>
+										<StorageAmount>16</StorageAmount>
+									</Item>
+								</FactoryOutputs>
+							<CycleTime>240</CycleTime>
+							<IsMainFactory>1</IsMainFactory>
+						</FactoryBase>
+					<LogisticNode/>
+					<AmbientMoodProvider/>
+						<Maintenance>
+							<Maintenances>
+								<Item>
+									<Product>1010017</Product>
+										<!-- Coins -->
+									<Amount>40</Amount>
+									<InactiveAmount>20</InactiveAmount>
+								</Item>
+								<Item>
+									<Product>1010116</Product>
+										<!-- artisan Workforce -->
+									<Amount>10</Amount>
+									<InactiveAmount>5</InactiveAmount>
+								</Item>
+							</Maintenances>
+						</Maintenance>
+					<Industrializable>
+						<MandatoryIndustrialization>0</MandatoryIndustrialization>
+						<BoostedByIndustrialization>0</BoostedByIndustrialization>
+					</Industrializable>
+					<Heated/>
+					<StreetActivation/>
+					<IncidentInfectable>
+						<IncidentInfectionChanceFactors>
+							<Fire>
+								<DensityDistance>20</DensityDistance>
+								<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+								<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+							</Fire>
+							<Riot>
+								<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+								<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+							</Riot>
+						</IncidentInfectionChanceFactors>
+					</IncidentInfectable>
+				</Values>
+			</Asset>
+		</ModOp>
+																<!-- Processed food chain [ProductionChain] -->
+
+			<ModOp GUID="500029" Type="addNextSibling">
+				<Asset>
+				<Template>ProductionChain</Template>
+					<Values>
+					<Standard>
+							<!-- Processed food Chain [ProductionChain] -->
+						<GUID>103690602</GUID>
+						<Name>production chain</Name>
+						<IconFilename>data/modgraphics/icons/icon_food.png</IconFilename>
+					</Standard>
+					<ProductionChain>
+										<!-- processed food store [factory7] -->
+						<Building>103690601</Building>
+							<Tier1>
+								<Item>
+									<!-- Cheese maker [factory7] -->
+								<Building>1500010103</Building>
+									<Tier2>
+										<Item>
+												<!--[FarmBuilding] milk Farm -->
+											<Building>1500010104</Building>
+										</Item>
+									</Tier2>
+								</Item>
+								<Item>
+									<!-- slaughterhouse [factory7] -->
+								<Building>1010316</Building>
+									<Tier2>
+										<Item>
+												<!--[FarmBuilding] pig Farm -->
+											<Building>1010269</Building>
+										</Item>
+									</Tier2>
+								</Item>
+								<Item>
+									<!-- bakery [factory7] -->
+								<Building>1010291</Building>
+									<Tier2>
+										<Item>
+												<!--[FarmBuilding] mill -->
+											<Building>1010313</Building>
+											<Tier3>
+												<Item>
+														<!--[FarmBuilding] Grain Farm -->
+													<Building>1010262</Building>
+												</Item>
+											</Tier3>
+										</Item>
+									</Tier2>
+								</Item>
+								<Item>
+									<!-- artisanal kitchen [factory7] -->
+								<Building>1010293</Building>
+									<Tier2>
+										<Item>
+												<!--[FarmBuilding] red pepper Farm -->
+											<Building>100654</Building>
+										</Item>
+										<Item>
+												<!--[FarmBuilding] cattle Farm -->
+											<Building>1010263</Building>
+										</Item>
+									</Tier2>
+								</Item>
+							</Tier1>
+					</ProductionChain>
+					<Locked/>
+					<Text>
+					<LocaText>
+						<English>
+						<Text>chain</Text>
+						<Status>Exported</Status>
+						<ExportCount>2</ExportCount>
+						</English>
+					</LocaText>
+					<LineID>14906</LineID>
+					</Text>
+					</Values>
+				</Asset>
+			</ModOp>
+																<!-- Processed Food [Asset pool] -->	
+
+				<ModOp Type="addPrevSibling" GUID="25000244">
+					<Asset>
+					<!-- processed food ast pool -->
+					<Template>AssetPool</Template>
+						<Values>
+						<Standard>
+						<GUID>103690603</GUID>
+						<Name>asset pool processed</Name>
+						</Standard>
+							<AssetPool>
+								<AssetList>
+									<Item>
+										<!-- processed food [product] -->
+										<Asset>103690600</Asset>
+									</Item>
+									<Item>
+										<!-- processed food [factory] -->
+										<Asset>103690601</Asset>
+									</Item>
+									<Item>
+										<!-- processed food [production chain] -->
+										<Asset>103690602</Asset>
+									</Item>
+								</AssetList>
+							</AssetPool>
+						</Values>
+					</Asset>
+				</ModOp>
+
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+						<!-- Luxury food -->
+							
+																<!-- Luxury food [product] -->
+
+				<ModOp GUID="1010195" Type="addNextSibling">
+					<Asset>
+						<Template>Product</Template>
+						<Values>
+						<Standard>
+							<GUID>103690700</GUID>
+							<!-- Luxury food [product] -->
+							<Name>Luxury food</Name>
+							<IconFilename>data/modgraphics/icons/icon_luxury_food.png</IconFilename>
+							<InfoDescription>103690709</InfoDescription>
+						</Standard>
+						<Text/>
+						<Locked/>
+						<Product>
+							<ProductCategory>11704</ProductCategory>
+							<BasePrice>55</BasePrice>
+							<CivLevel>1</CivLevel>
+							<AssociatedRegion>Moderate</AssociatedRegion>
+							<StorageLevel>Building</StorageLevel>
+							<ProductionRegions>
+							<Item>
+								<RegionType>Moderate</RegionType>
+							</Item>
+							</ProductionRegions>
+						</Product>
+						<ExpeditionAttribute>
+							<BaseMorale>20</BaseMorale>
+							<ExpeditionAttributes>
+							<Item>
+								<Attribute>Faith</Attribute>
+								<Amount>15</Amount>
+							</Item>
+							</ExpeditionAttributes>
+						</ExpeditionAttribute>
+						</Values>
+					</Asset>
+				</ModOp>
+																<!-- Luxury food store [factory7] -->
+		
+			<ModOp GUID="1010195" Type="addNextSibling">
+			<Asset>
+				<Template>FactoryBuilding7</Template>
+				<Values>
+				<Standard>
+									<!-- Luxury food store [factory7] -->
+					<GUID>103690701</GUID>
+					<Name>Luxury_food_market</Name>
+					<IconFilename>data/modgraphics/icons/icon_luxury_food.png</IconFilename>
+					<InfoDescription>103690708</InfoDescription>
+				</Standard>
+				<Building>
+					<BuildModeRandomRotation>90</BuildModeRandomRotation>
+					<AssociatedRegions>Moderate</AssociatedRegions>
+				</Building>
+				<Blocking/>
+				<Cost>
+					<Costs>
+					<Item>
+						<Ingredient>1010017</Ingredient>
+						<!-- Coins -->
+						<Amount>500</Amount>
+					</Item>
+					<Item>
+						<Ingredient>1010196</Ingredient>
+						<!-- Timber -->
+						<Amount>4</Amount>
+					</Item>
+					</Costs>
+				</Cost>
+				<Object>
+					<Variations>
+					<Item>
+						<Filename>data/graphics/buildings/residence/residence_tier03_estate02/residence_tier03_estate02.cfg</Filename>
+					</Item>
+					</Variations>
+				</Object>
+				<Mesh/>
+				<Selection>
+					<ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+					<Colors>
+					<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+					</Colors>
+				</Selection>
+				<Text>
+					<LocaText>
+					<English>
+						<Text>Factory</Text>
+						<Status>Exported</Status>
+						<ExportCount>1</ExportCount>
+					</English>
+					</LocaText>
+					<LineID>5316</LineID>
+				</Text>
+				<Constructable/>
+				<Locked/>
+				<SoundEmitter>
+					<ActiveSounds>
+					<Item>
+						<Sound>216877</Sound>
+					</Item>
+					<Item>
+						<Sound>202231</Sound>
+					</Item>
+					</ActiveSounds>
+					<IncidentSounds>
+					<InfectedFire>
+						<Item>
+						<Sound>214659</Sound>
+						</Item>
+					</InfectedFire>
+					</IncidentSounds>
+				</SoundEmitter>
+				<FeedbackController/>
+				<Infolayer/>
+				<UpgradeList/>
+				<Factory7/>
+				<FactoryBase>
+					<FactoryInputs>
+					<Item>
+						<Product>120033</Product>
+						<!-- fried plantain -->
+						<Amount>1</Amount>
+						<StorageAmount>4</StorageAmount>
+					</Item>
+					<Item>
+						<Product>120035</Product>
+						<!-- tortillas -->
+						<Amount>1</Amount>
+						<StorageAmount>4</StorageAmount>
+					</Item>
+					<Item>
+						<Product>114359</Product>
+						<!-- dried meat -->
+						<Amount>1</Amount>
+						<StorageAmount>4</StorageAmount>
+					</Item>
+					<Item>
+						<Product>118728</Product>
+						<!-- lobster -->
+						<Amount>1</Amount>
+						<StorageAmount>4</StorageAmount>
+					</Item>
+					</FactoryInputs>
+					<FactoryOutputs>
+					<Item>
+						<Product>103690700</Product>
+						<!-- Processed food -->
+						<Amount>4</Amount>
+						<StorageAmount>16</StorageAmount>
+					</Item>
+					</FactoryOutputs>
+					<CycleTime>240</CycleTime>
+					<IsMainFactory>1</IsMainFactory>
+				</FactoryBase>
+				<LogisticNode/>
+				<AmbientMoodProvider/>
+				<Maintenance>
+					<Maintenances>
+					<Item>
+						<Product>1010017</Product>
+						<!-- Coins -->
+						<Amount>40</Amount>
+						<InactiveAmount>20</InactiveAmount>
+					</Item>
+					<Item>
+						<Product>1010116</Product>
+						<!-- Artisan Workforce -->
+						<Amount>10</Amount>
+						<InactiveAmount>5</InactiveAmount>
+					</Item>
+					</Maintenances>
+				</Maintenance>
+				<Industrializable>
+					<MandatoryIndustrialization>0</MandatoryIndustrialization>
+					<BoostedByIndustrialization>0</BoostedByIndustrialization>
+				</Industrializable>
+				<Heated>
+					<RequiresHeat>0</RequiresHeat>
+				</Heated>
+				<StreetActivation/>
+				<IncidentInfectable>
+					<IncidentInfectionChanceFactors>
+					<Fire>
+						<DensityDistance>20</DensityDistance>
+						<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+						<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+					</Fire>
+					<Riot>
+						<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+						<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+					</Riot>
+					</IncidentInfectionChanceFactors>
+				</IncidentInfectable>
+				</Values>
+			</Asset>
+			</ModOp>
+																<!-- Luxury food chain [ProductionChain] -->
+
+				<ModOp GUID="500029" Type="addNextSibling">
+				<Asset>
+					<Template>ProductionChain</Template>
+					<Values>
+					<Standard>
+						<!-- Luxury food Chain [ProductionChain] -->
+						<GUID>103690702</GUID>
+						<Name>production chain</Name>
+						<IconFilename>data/modgraphics/icons/icon_Luxury_food.png</IconFilename>
+					</Standard>
+					<ProductionChain>
+										<!-- Luxury food store [factory7] -->
+						<Building>103690701</Building>
+							<Tier1>
+							<Item>
+								<!-- Fried Plantain Kitchen [factory7] -->
+								<Building>101264</Building>
+								<Tier2>
+									<Item>
+										<!--[FarmBuilding] fish oil factory -->
+										<Building>101262</Building>
+									</Item>
+									<Item>
+										<!--[FarmBuilding] plantain plantation -->
+										<Building>101263</Building>
+									</Item>
+								</Tier2>
+							</Item>
+							<Item>
+								<!--  [factory7] tortilla factory -->
+								<Building>101271</Building>
+								<Tier2>
+									<Item>
+										<!--[FarmBuilding] cattle farm -->
+										<Building>101269</Building>
+									</Item>
+									<Item>
+										<!--[FarmBuilding] corn plantation -->
+										<Building>101270</Building>
+									</Item>
+								</Tier2>
+							</Item>
+							<Item>
+								<!-- sanga meat dryhouse [factory7] -->
+								<Building>114444</Building>
+								<Tier2>
+									<Item>
+										<!--[FarmBuilding] sanga farm -->
+										<Building>114439</Building>
+									</Item>
+									<Item>
+										<!--[FarmBuilding] salt works -->
+										<Building>114440</Building>
+									</Item>
+								</Tier2>
+							</Item>
+							<Item>
+								<!-- lobster fishery  [factory7] -->
+								<Building>118729</Building>
+							</Item>
+							</Tier1>
+					</ProductionChain>
+					<Locked/>
+					<Text>
+						<LocaText>
+						<English>
+							<Text>chain</Text>
+							<Status>Exported</Status>
+							<ExportCount>2</ExportCount>
+						</English>
+						</LocaText>
+						<LineID>14906</LineID>
+					</Text>
+					</Values>
+				</Asset>
+				</ModOp>
+																<!-- luxury food [Asset pool] -->
+
+					<ModOp Type="addPrevSibling" GUID="25000244">
+						<Asset>
+						<!-- luxury food ast pool -->
+							<Template>AssetPool</Template>
+							<Values>
+								<Standard>
+									<GUID>103690703</GUID>
+									<Name>asset pool processed</Name>
+								</Standard>
+							<AssetPool>
+								<AssetList>
+									<Item>
+											<!-- luxury food [product] -->
+										<Asset>103690700</Asset>
+									</Item>
+									<Item>
+											<!-- luxury food [factory] -->
+										<Asset>103690701</Asset>
+									</Item>
+									<Item>
+											<!-- luxury food [production chain] -->
+										<Asset>103690702</Asset>
+									</Item>
+								</AssetList>
+							</AssetPool>
+							</Values>
+						</Asset>
+					</ModOp>
+
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+						<!-- T1 Agricultural Goods -->
+
+																<!-- T1 Agricultural Goods [product] -->
+							  
+				<ModOp GUID="1010195" Type="addNextSibling">
+					<Asset>
+						<Template>Product</Template>
+						<Values>
+						<Standard>
+							<GUID>103690800</GUID>
+							<!-- T1 Agricultural Goods [product] -->
+							<Name>Agricultural_Goods</Name>
+							<IconFilename>data/modgraphics/icons/icon_fruits_corn.png</IconFilename>
+							<InfoDescription>103690809</InfoDescription>
+						</Standard>
+						<Text/>
+						<Locked/>
+						<Product>
+							<ProductCategory>11704</ProductCategory>
+							<BasePrice>30</BasePrice>
+							<CivLevel>1</CivLevel>
+							<AssociatedRegion>Moderate</AssociatedRegion>
+							<StorageLevel>Building</StorageLevel>
+							<ProductionRegions>
+							<Item>
+								<RegionType>Moderate</RegionType>
+							</Item>
+							</ProductionRegions>
+						</Product>
+						<ExpeditionAttribute>
+							<BaseMorale>20</BaseMorale>
+							<ExpeditionAttributes>
+							<Item>
+								<Attribute>Melee</Attribute>
+								<Amount>10</Amount>
+							</Item>
+							</ExpeditionAttributes>
+						</ExpeditionAttribute>
+						</Values>
+					</Asset>
+				</ModOp>
+																<!-- T1 Agricultural Goods Store [factory7] -->
+
+			<ModOp GUID="1010195" Type="addNextSibling">
+			<Asset>
+			<Template>FactoryBuilding7</Template>
+			<Values>
+			<Standard>
+			<!-- T1 Agricultural Goods Store [factory7] -->
+			<GUID>103690801</GUID>
+			<Name>T1 Agricultural Goods Store</Name>
+			<IconFilename>data/modgraphics/icons/icon_fruits_corn.png</IconFilename>
+			<InfoDescription>103690808</InfoDescription>
+			</Standard>
+			<Building>
+			<BuildModeRandomRotation>90</BuildModeRandomRotation>
+			<AssociatedRegions>Moderate</AssociatedRegions>
+			</Building>
+			<Blocking/>
+			<Cost>
+			<Costs>
+			<Item>
+			<Ingredient>1010017</Ingredient>
+			<!-- Coins -->
+			<Amount>500</Amount>
+			</Item>
+			<Item>
+			<Ingredient>1010196</Ingredient>
+			<!-- Timber -->
+			<Amount>4</Amount>
+			</Item>
+			</Costs>
+			</Cost>
+			<Object>
+			<Variations>
+			<Item>
+			<Filename>data/graphics/buildings/residence/residence_tier03_estate02/residence_tier03_estate02.cfg</Filename>
+			</Item>
+			</Variations>
+			</Object>
+			<Mesh/>
+			<Selection>
+			<ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+			<Colors>
+			<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+			</Colors>
+			</Selection>
+			<Text>
+			<LocaText>
+			<English>
+			<Text>Factory</Text>
+			<Status>Exported</Status>
+			<ExportCount>1</ExportCount>
+			</English>
+			</LocaText>
+			<LineID>5316</LineID>
+			</Text>
+			<Constructable/>
+			<Locked/>
+			<SoundEmitter>
+			<ActiveSounds>
+			<Item>
+			<Sound>216877</Sound>
+			</Item>
+			<Item>
+			<Sound>202231</Sound>
+			</Item>
+			</ActiveSounds>
+			<IncidentSounds>
+			<InfectedFire>
+			<Item>
+			<Sound>214659</Sound>
+			</Item>
+			</InfectedFire>
+			</IncidentSounds>
+			</SoundEmitter>
+			<FeedbackController/>
+			<Infolayer/>
+			<UpgradeList/>
+			<Factory7/>
+			<FactoryBase>
+			<FactoryInputs>
+			<Item>
+			<Product>120041</Product>
+			<!-- Plantain -->
+			<Amount>1</Amount>
+			<StorageAmount>4</StorageAmount>
+			</Item>
+			<Item>
+			<Product>133097</Product>
+			<!-- citrus -->
+			<Amount>1</Amount>
+			<StorageAmount>4</StorageAmount>
+			</Item>
+			<Item>
+			<Product>120034</Product>
+			<!-- corn -->
+			<Amount>1</Amount>
+			<StorageAmount>4</StorageAmount>
+			</Item>
+			<Item>
+			<Product>120014</Product>
+			<!-- grapes -->
+			<Amount>1</Amount>
+			<StorageAmount>4</StorageAmount>
+			</Item>
+			</FactoryInputs>
+			<FactoryOutputs>
+			<Item>
+			<Product>103690800</Product>
+			<!-- T1 Agricultural Goods -->
+			<Amount>4</Amount>
+			<StorageAmount>16</StorageAmount>
+			</Item>
+			</FactoryOutputs>
+			<CycleTime>240</CycleTime>
+			<IsMainFactory>1</IsMainFactory>
+			</FactoryBase>
+			<LogisticNode/>
+			<AmbientMoodProvider/>
+			<Maintenance>
+			<Maintenances>
+			<Item>
+			<Product>1010017</Product>
+			<!-- Coins -->
+			<Amount>40</Amount>
+			<InactiveAmount>20</InactiveAmount>
+			</Item>
+			<Item>
+			<Product>1010116</Product>
+			<!-- Artisan Workforce -->
+			<Amount>10</Amount>
+			<InactiveAmount>5</InactiveAmount>
+			</Item>
+			</Maintenances>
+			</Maintenance>
+			<Industrializable>
+			<MandatoryIndustrialization>0</MandatoryIndustrialization>
+			<BoostedByIndustrialization>0</BoostedByIndustrialization>
+			</Industrializable>
+			<Heated>
+			<RequiresHeat>0</RequiresHeat>
+			</Heated>
+			<StreetActivation/>
+			<IncidentInfectable>
+			<IncidentInfectionChanceFactors>
+			<Fire>
+			<DensityDistance>20</DensityDistance>
+			<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+			<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+			</Fire>
+			<Riot>
+			<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+			<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+			</Riot>
+			</IncidentInfectionChanceFactors>
+			</IncidentInfectable>
+			</Values>
+			</Asset>
+			</ModOp>
+																<!-- T1 Agricultural Goods chain [ProductionChain] -->
+
+				<ModOp GUID="500029" Type="addNextSibling">
+					<Asset>
+					<Template>ProductionChain</Template>
+							<!-- T1 Agricultural Goods Store [ProductionChain] -->
+					<Values>
+						<Standard>
+						<GUID>103690802</GUID>
+						<Name>production chain</Name>
+						<IconFilename>data/modgraphics/icons/icon_fruits_corn.png</IconFilename>
+						</Standard>
+						<ProductionChain>
+									<!-- T1 Agricultural Goods Store [factory7] -->
+						<Building>103690801</Building>
+						<Tier1>
+							<Item>
+							<Building>101263</Building>
+							<!-- plantain plantation [farm] -->
+							</Item>
+							<Item>
+							<Building>100655</Building>
+							<!-- grape plantation [farm] -->
+							</Item>
+							<Item>
+							<Building>101270</Building>
+							<!-- corn plantation [farm] -->
+							</Item>
+							<Item>
+							<Building>133031</Building>
+							<!-- new world orchard -->
+							</Item>
+						</Tier1>
+						</ProductionChain>
+						<Locked/>
+						<Text>
+						<LocaText>
+							<English>
+							<Text>chain</Text>
+							<Status>Exported</Status>
+							<ExportCount>2</ExportCount>
+							</English>
+						</LocaText>
+						<LineID>14906</LineID>
+						</Text>
+					</Values>
+					</Asset>
+				</ModOp>
+																<!-- T1 Agricultural Goods [Asset pool] -->	
+				  
+					<ModOp Type="addPrevSibling" GUID="25000244">
+						<Asset>
+						<!-- T1 Agricultural Goods ast pool -->
+						  <Template>AssetPool</Template>
+						  <Values>
+							<Standard>
+							  <GUID>103690803</GUID>
+							  <Name>asset pool T1 Agricultural Goods</Name>
+							</Standard>
+							<AssetPool>
+							  <AssetList>
+								  <Item>
+										<!-- T1 Agricultural Goods [product] -->
+									<Asset>103690800</Asset>
+								  </Item>
+								  <Item>
+										<!-- T1 Agricultural Goods Store [factory7] -->
+									<Asset>103690801</Asset>
+								  </Item>
+								  <Item>
+										<!-- T1 Agricultural Goods Store [production chain] -->
+									<Asset>103690802</Asset>
+								  </Item>
+								  <Item>
+										<!-- plantains [product] -->
+									<Asset>120041</Asset>
+								  </Item>
+								  <Item>
+										<!-- plantain plantation [farm] -->
+									<Asset>101263</Asset>
+								  </Item>
+								  <Item>
+										<!-- grapes [product] -->
+									<Asset>120014</Asset>
+								  </Item>
+								  <Item>
+										<!-- grape plantation [farm] -->
+									<Asset>100655</Asset>
+								  </Item>
+								  <Item>
+										<!-- corn [product] -->
+									<Asset>120034</Asset>
+								  </Item>
+								  <Item>
+										<!-- corn plantation [farm] -->
+									<Asset>101270</Asset>
+								  </Item>
+								  <Item>
+										<!-- citrus [product] -->
+									<Asset>133097</Asset>
+								  </Item>
+								  <Item>
+										<!--  new world orchard -->
+									<Asset>133010</Asset>
+								  </Item>
+								  <Item>
+										<!--  new world orchard: citrus -->
+									<Asset>133031</Asset>
+								  </Item>
+							  </AssetList>
+							</AssetPool>
+						  </Values>
+						</Asset>
+					</ModOp>
+					
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+							<!-- T2 Agricultural Goods -->
+															
+															<!-- T2 Agricultural Goods [product] -->
+
+					<ModOp GUID="1010195" Type="addNextSibling">
+						<Asset>
+						  <Template>Product</Template>
+						  <Values>
+							<Standard>
+							  <GUID>103690900</GUID>
+							  <!-- T2 Agricultural Goods [product] -->
+							  <Name>Advanced_Agricultural_Goods</Name>
+							  <IconFilename>data/modgraphics/icons/icon_new_produce.png</IconFilename>
+							  <InfoDescription>103690909</InfoDescription>
+							</Standard>
+							<Text/>
+							<Locked/>
+							<Product>
+							  <ProductCategory>11704</ProductCategory>
+							  <BasePrice>55</BasePrice>
+							  <CivLevel>1</CivLevel>
+							  <AssociatedRegion>Moderate</AssociatedRegion>
+							  <StorageLevel>Building</StorageLevel>
+							  <ProductionRegions>
+								<Item>
+								  <RegionType>Moderate</RegionType>
+								</Item>
+							  </ProductionRegions>
+							</Product>
+							<ExpeditionAttribute>
+							  <BaseMorale>20</BaseMorale>
+							  <ExpeditionAttributes>
+								<Item>
+									<Attribute>Faith</Attribute>
+									<Amount>15</Amount>
+								</Item>
+							  </ExpeditionAttributes>
+							</ExpeditionAttribute>
+						  </Values>
+						</Asset>
+					</ModOp>
+															<!-- T2 Agricultural Goods store [factory7] -->
+
+			<ModOp GUID="1010195" Type="addNextSibling">
+		<Asset>
+			<Template>FactoryBuilding7</Template>
+			<Values>
+				<Standard>
+				<!-- T2 Agricultural Goods store [factory7] -->
+				<GUID>103690901</GUID>
+				<Name>Advanced_Agricultural_Goods_Store</Name>
+				<IconFilename>data/modgraphics/icons/icon_new_produce.png</IconFilename>
+				<InfoDescription>103690908</InfoDescription>
+				</Standard>
+				<Building>
+					<BuildModeRandomRotation>90</BuildModeRandomRotation>
+					<AssociatedRegions>Moderate</AssociatedRegions>
+				</Building>
+			<Blocking/>
+				<Cost>
+					<Costs>
+						<Item>
+							<Ingredient>1010017</Ingredient>
+							<!-- Coins -->
+							<Amount>500</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010196</Ingredient>
+							<!-- Timber -->
+							<Amount>4</Amount>
+						</Item>
+					</Costs>
+				</Cost>
+			<Object>
+				<Variations>
+					<Item>
+					<Filename>data/graphics/buildings/residence/residence_tier03_estate02/residence_tier03_estate02.cfg</Filename>
+					</Item>
+				</Variations>
+			</Object>
+			<Mesh/>
+				<Selection>
+					<ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+					<Colors>
+						<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+					</Colors>
+				</Selection>
+				<Text>
+						<LocaText>
+						<English>
+						<Text>Factory</Text>
+						<Status>Exported</Status>
+						<ExportCount>1</ExportCount>
+						</English>
+						</LocaText>
+					<LineID>5316</LineID>
+				</Text>
+			<Constructable/>
+			<Locked/>
+					<SoundEmitter>
+						<ActiveSounds>
+							<Item>
+								<Sound>216877</Sound>
+							</Item>
+							<Item>
+								<Sound>202231</Sound>
+							</Item>
+						</ActiveSounds>
+								<IncidentSounds>
+									<InfectedFire>
+										<Item>
+											<Sound>214659</Sound>
+										</Item>
+									</InfectedFire>
+								</IncidentSounds>
+					</SoundEmitter>
+			<FeedbackController/>
+			<Infolayer/>
+			<UpgradeList/>
+			<Factory7/>
+						<FactoryBase>
+								<FactoryInputs>
+									<Item>
+										<Product>1010235</Product>
+										<!-- flour -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+									<Item>
+										<Product>1010252</Product>
+										<!-- tobacco -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+									<Item>
+										<Product>1010239</Product>
+										<!-- sugar -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+									<Item>
+										<Product>1010254</Product>
+										<!-- cocoa -->
+										<Amount>1</Amount>
+										<StorageAmount>4</StorageAmount>
+									</Item>
+								</FactoryInputs>
+								<FactoryOutputs>
+									<Item>
+										<Product>103690900</Product>
+										<!-- T2 Agricultural Goods -->
+										<Amount>4</Amount>
+										<StorageAmount>16</StorageAmount>
+									</Item>
+								</FactoryOutputs>
+								<CycleTime>240</CycleTime>
+								<IsMainFactory>1</IsMainFactory>
+						</FactoryBase>
+			<LogisticNode/>
+			<AmbientMoodProvider/>
+				<Maintenance>
+					<Maintenances>
+						<Item>
+							<Product>1010017</Product>
+							<!-- Coins -->
+							<Amount>40</Amount>
+							<InactiveAmount>20</InactiveAmount>
+						</Item>
+						<Item>
+							<Product>1010116</Product>
+							<!-- Artisan Workforce -->
+							<Amount>10</Amount>
+							<InactiveAmount>5</InactiveAmount>
+						</Item>
+					</Maintenances>
+				</Maintenance>
+					<Industrializable>
+						<MandatoryIndustrialization>0</MandatoryIndustrialization>
+						<BoostedByIndustrialization>0</BoostedByIndustrialization>
+					</Industrializable>
+			<Heated/>
+			<StreetActivation/>
+				<IncidentInfectable>
+					<IncidentInfectionChanceFactors>
+					<Fire>
+						<DensityDistance>20</DensityDistance>
+							<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+							<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+					</Fire>
+					<Riot>
+						<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+						<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+					</Riot>
+					</IncidentInfectionChanceFactors>
+				</IncidentInfectable>
+			</Values>
+			</Asset>
+			</ModOp>
+															<!-- T2 Agricultural Goods chain [ProductionChain] -->
+
+				<ModOp GUID="500029" Type="addNextSibling">
+				<Asset>
+				<Template>ProductionChain</Template>
+				<Values>
+				<Standard>
+					<!-- T2 Agricultural Goods Chain [ProductionChain] -->
+				<GUID>103690902</GUID>
+				<Name>production chain</Name>
+				<IconFilename>data/modgraphics/icons/icon_new_produce.png</IconFilename>
+				</Standard>
+				<ProductionChain>
+									<!-- T2 Agricultural Goods store [factory7] -->
+				<Building>103690901</Building>
+				<Tier1>
+					<Item>
+					<!-- flour mill [factory7] -->
+					<Building>1010313</Building>
+						<Tier2>
+							<Item>
+								<!--[FarmBuilding] Grain Farm -->
+								<Building>1010262</Building>
+							</Item>
+						</Tier2>
+					</Item>
+					<Item>
+					<!-- tobacco plantation [farm] -->
+					<Building>1010330</Building>
+					</Item>
+					<Item>
+					<!-- sugar refinery [factory7] -->
+					<Building>1010317</Building>
+						<Tier2>
+							<Item>
+								<!--[FarmBuilding] Grain Farm -->
+								<Building>1010329</Building>
+							</Item>
+						</Tier2>
+					</Item>
+					<Item>
+					<!-- cocoa plantation [farm] -->
+					<Building>1010332</Building>
+					</Item>
+				</Tier1>
+				</ProductionChain>
+				<Locked/>
+				<Text>
+				<LocaText>
+					<English>
+					<Text>chain</Text>
+					<Status>Exported</Status>
+					<ExportCount>2</ExportCount>
+					</English>
+				</LocaText>
+				<LineID>14906</LineID>
+				</Text>
+				</Values>
+				</Asset>
+				</ModOp>
+															<!-- T2 Agricultural Goods [Asset pool] -->	
+				  
+					<ModOp Type="addPrevSibling" GUID="25000244">
+						<Asset>
+						<!-- T2 Agricultural Goods ast pool -->
+						  <Template>AssetPool</Template>
+						  <Values>
+							<Standard>
+							  <GUID>103690903</GUID>
+							  <Name>asset pool processed</Name>
+							</Standard>
+							<AssetPool>
+							  <AssetList>
+								  <Item>
+										<!-- T2 Agricultural Goods [product] -->
+									<Asset>103690900</Asset>
+								  </Item>
+								  <Item>
+										<!-- T2 Agricultural Goods [factory] -->
+									<Asset>103690901</Asset>
+								  </Item>
+								  <Item>
+										<!-- T2 Agricultural Goods [production chain] -->
+									<Asset>103690902</Asset>
+								  </Item>
+								  <Item>
+										<!-- tobacco [product] -->
+									<Asset>1010252</Asset>
+								  </Item>
+								  <Item>
+										<!-- tobacco plantation [farm] -->
+									<Asset>1010330</Asset>
+								  </Item>
+								  <Item>
+										<!-- sugar [product] -->
+									<Asset>1010239</Asset>
+								  </Item>
+								  <Item>
+										<!-- sugar refinery [factory7] -->
+									<Asset>1010317</Asset>
+								  </Item>
+								  <Item>
+										<!-- sugar cane [product] -->
+									<Asset>1010251</Asset>
+								  </Item>
+								  <Item>
+										<!-- sugar plantation [farm]  -->
+									<Asset>1010329</Asset>
+								  </Item>
+								  <Item>
+										<!-- cocoa [product] -->
+									<Asset>1010254</Asset>
+								  </Item>
+								  <Item>
+										<!-- cocoa plantation [farm] -->
+									<Asset>1010332</Asset>
+								  </Item>
+							  </AssetList>
+							</AssetPool>
+						  </Values>
+						</Asset>
+					</ModOp>
+
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+							<!-- T3 Agricultural Goods -->
+														
+															<!-- T3 Agricultural Goods [product] -->
+
+					<ModOp GUID="1010195" Type="addNextSibling">
+						<Asset>
+						  <Template>Product</Template>
+						  <Values>
+							<Standard>
+							  <GUID>103691000</GUID>
+							  <!-- T3 Agricultural Goods [product] -->
+							  <Name>Advanced_Agricultural_Goods</Name>
+							  <IconFilename>data/modgraphics/icons/icon_spices.png</IconFilename>
+							  <InfoDescription>103691009</InfoDescription>
+							</Standard>
+							<Text/>
+							<Locked/>
+							<Product>
+							  <ProductCategory>11704</ProductCategory>
+							  <BasePrice>55</BasePrice>
+							  <CivLevel>1</CivLevel>
+							  <AssociatedRegion>Moderate</AssociatedRegion>
+							  <StorageLevel>Building</StorageLevel>
+							  <ProductionRegions>
+								<Item>
+								  <RegionType>Moderate</RegionType>
+								</Item>
+							  </ProductionRegions>
+							</Product>
+							<ExpeditionAttribute>
+							  <BaseMorale>20</BaseMorale>
+							  <ExpeditionAttributes>
+								<Item>
+									<Attribute>Faith</Attribute>
+									<Amount>15</Amount>
+								</Item>
+							  </ExpeditionAttributes>
+							</ExpeditionAttribute>
+						  </Values>
+						</Asset>
+					</ModOp>
+															<!-- T3 Agricultural Goods store [factory7] -->
+
+	<ModOp GUID="1010195" Type="addNextSibling">
+		<Asset>
+			<Template>FactoryBuilding7</Template>
+				<Values>
+				<Standard>
+				<!-- T3 Agricultural Goods store [factory7] -->
+				<GUID>103691001</GUID>
+				<Name>Advanced_Agricultural_Goods_Store</Name>
+				<IconFilename>data/modgraphics/icons/icon_spices.png</IconFilename>
+				<InfoDescription>103691008</InfoDescription>
+				</Standard>
+				<Building>
+					<BuildModeRandomRotation>90</BuildModeRandomRotation>
+					<AssociatedRegions>Moderate</AssociatedRegions>
+				</Building>
+				<Blocking/>
+				<Cost>
+					<Costs>
+						<Item>
+							<Ingredient>1010017</Ingredient>
+							<!-- Coins -->
+							<Amount>500</Amount>
+						</Item>
+						<Item>
+							<Ingredient>1010196</Ingredient>
+							<!-- Timber -->
+							<Amount>4</Amount>
+						</Item>
+					</Costs>
+				</Cost>
+				<Object>
+					<Variations>
+						<Item>
+							<Filename>data/graphics/buildings/residence/residence_tier03_estate02/residence_tier03_estate02.cfg</Filename>
+						</Item>
+					</Variations>
+				</Object>
+				<Mesh/>
+						<Selection>
+							<ParticipantMessageArcheType>Resident_tier03_atWork</ParticipantMessageArcheType>
+								<Colors>
+									<WeakSelectionColorType>NoColor</WeakSelectionColorType>
+								</Colors>
+						</Selection>
+				<Text>
+					<LocaText>
+						<English>
+							<Text>Factory</Text>
+							<Status>Exported</Status>
+							<ExportCount>1</ExportCount>
+						</English>
+					</LocaText>
+				<LineID>5316</LineID>
+				</Text>
+				<Constructable/>
+				<Locked/>
+				<SoundEmitter>
+					<ActiveSounds>
+						<Item>
+							<Sound>216877</Sound>
+						</Item>
+						<Item>
+							<Sound>202231</Sound>
+						</Item>
+					</ActiveSounds>
+				<IncidentSounds>
+				<InfectedFire>
+					<Item>
+						<Sound>214659</Sound>
+					</Item>
+				</InfectedFire>
+				</IncidentSounds>
+				</SoundEmitter>
+				<FeedbackController/>
+				<Infolayer/>
+				<UpgradeList/>
+				<Factory7/>
+					<FactoryBase>
+						<FactoryInputs>
+							<Item>
+								<Product>133183</Product>
+								<!-- jam [product] -->
+								<Amount>1</Amount>
+								<StorageAmount>4</StorageAmount>
+							</Item>
+							<Item>
+								<Product>133093</Product>
+								<!-- cinnamon [product] -->
+								<Amount>1</Amount>
+								<StorageAmount>4</StorageAmount>
+							</Item>
+							<Item>
+								<Product>114369</Product>
+								<!-- spices [product] -->
+								<Amount>1</Amount>
+								<StorageAmount>4</StorageAmount>
+							</Item>
+							<Item>
+								<Product>114370</Product>
+								<!-- beeswax [product] -->
+								<Amount>1</Amount>
+								<StorageAmount>4</StorageAmount>
+							</Item>
+						</FactoryInputs>
+						<FactoryOutputs>
+							<Item>
+								<Product>103691000</Product>
+								<!-- T3 Agricultural Goods -->
+									<Amount>4</Amount>
+									<StorageAmount>16</StorageAmount>
+							</Item>
+						</FactoryOutputs>
+						<CycleTime>240</CycleTime>
+						<IsMainFactory>1</IsMainFactory>
+					</FactoryBase>
+				<LogisticNode/>
+				<AmbientMoodProvider/>
+					<Maintenance>
+						<Maintenances>
+							<Item>
+								<Product>1010017</Product>
+								<!-- Coins -->
+								<Amount>40</Amount>
+								<InactiveAmount>20</InactiveAmount>
+							</Item>
+							<Item>
+								<Product>1010116</Product>
+								<!-- Artisan Workforce -->
+								<Amount>10</Amount>
+								<InactiveAmount>5</InactiveAmount>
+							</Item>
+						</Maintenances>
+					</Maintenance>
+				<Industrializable>
+					<MandatoryIndustrialization>0</MandatoryIndustrialization>
+					<BoostedByIndustrialization>0</BoostedByIndustrialization>
+				</Industrializable>
+				<Heated/>
+				<StreetActivation/>
+					<IncidentInfectable>
+						<IncidentInfectionChanceFactors>
+							<Fire>
+								<DensityDistance>20</DensityDistance>
+								<FactoryProductivityFactor>0.1</FactoryProductivityFactor>
+								<FactoryUndertimeFactor>0.05</FactoryUndertimeFactor>
+							</Fire>
+								<Riot>
+									<FactoryOvertimeFactor>0.4</FactoryOvertimeFactor>
+									<FactoryUndertimeFactor>0.2</FactoryUndertimeFactor>
+								</Riot>
+						</IncidentInfectionChanceFactors>
+					</IncidentInfectable>
+				</Values>
+		</Asset>
+	</ModOp>
+															<!-- T3 Agricultural Goods chain [ProductionChain] -->
+
+		<ModOp GUID="500029" Type="addNextSibling">
+			<Asset>
+				<Template>ProductionChain</Template>
+				<Values>
+					<Standard>
+						<!-- T3 Agricultural Goods Chain [ProductionChain] -->
+					<GUID>103691002</GUID>
+					<Name>production chain</Name>
+					<IconFilename>data/modgraphics/icons/icon_spices.png</IconFilename>
+					</Standard>
+					<ProductionChain>
+							<!-- T3 Agricultural Goods store [factory7] -->
+						<Building>103691001</Building>
+							<Tier1>
+								<Item>
+									<!--   [orchard] -->
+									<Building>133496</Building>
+								</Item>
+								<Item>
+									<!--   [orchard] -->
+									<Building>133030</Building>
+								</Item>
+								<Item>
+									<!--  spice plantation [farm] -->
+									<Building>114452</Building>
+								</Item>
+								<Item>
+									<!--  apiary [farm] -->
+									<Building>114453</Building>
+								</Item>
+							</Tier1>
+					</ProductionChain>
+					<Locked/>
+						<Text>
+								<LocaText>
+									<English>
+									<Text>chain</Text>
+									<Status>Exported</Status>
+									<ExportCount>2</ExportCount>
+									</English>
+								</LocaText>
+							<LineID>14906</LineID>
+						</Text>
+				</Values>
+			</Asset>
+		</ModOp>
+															<!-- T3 Agricultural [Asset pool] -->	
+				  
+			<ModOp Type="addPrevSibling" GUID="25000244">
+				<Asset>
+				<!-- T3 Agricultural Goods ast pool -->
+					<Template>AssetPool</Template>
+					<Values>
+					<Standard>
+						<GUID>103691003</GUID>
+						<Name>asset pool processed</Name>
+					</Standard>
+					<AssetPool>
+						<AssetList>
+							<Item>
+								<!-- T3 Agricultural Goods [product] -->
+							<Asset>103691000</Asset>
+							</Item>
+							<Item>
+								<!-- T3 Agricultural Goods [factory] -->
+							<Asset>103691001</Asset>
+							</Item>
+							<Item>
+								<!-- T3 Agricultural Goods [production chain] -->
+							<Asset>103691002</Asset>
+							</Item>
+							<Item>
+								<!-- jam [orchard] -->
+							<Asset>133496</Asset>
+							</Item>
+							<Item>
+								<!-- jam [recipe] -->
+							<Asset>133498</Asset>
+							</Item>
+							<Item>
+								<!-- jam [product] -->
+							<Asset>133183</Asset>
+							</Item>
+							<Item>
+								<!-- cinnamon [orchard] -->
+							<Asset>133030</Asset>
+							</Item>
+							<Item>
+								<!-- cinnamon [recipe] -->
+							<Asset>133028</Asset>
+							</Item>
+							<Item>
+								<!-- cinnamon [product]  -->
+							<Asset>133093</Asset>
+							</Item>
+							<Item>
+								<!-- beeswax [product] -->
+							<Asset>114370</Asset>
+							</Item>
+							<Item>
+								<!-- apiary flower plantation [farm] -->
+							<Asset>114453</Asset>
+							</Item>
+							<Item>
+								<!-- spices [product] -->
+							<Asset>114369</Asset>
+							</Item>
+							<Item>
+								<!-- spices plantation [farm] -->
+							<Asset>114452</Asset>
+							</Item>
+						</AssetList>
+					</AssetPool>
+					</Values>
+				</Asset>
+			</ModOp>
+
+          							<!-- END of AGGREGATES -->
+
+														<!-- START of UNLOCK tweaks -->
+
+        			<!-- Unlock AGGREGATES -->
+		  	<ModOp Type="addNextSibling" GUID="130248">
+
+        				<!-- Unlock AGGREGATES -->
+			<Asset>
+			  <Template>Trigger</Template>
+			  <Values>
+				<Standard>
+				  <GUID>1036905113</GUID>
+				  <Name>MOD Trigger</Name>
+				</Standard>
+				<Trigger>
+				  <TriggerCondition>
+					<Template>ConditionAlwaysTrue</Template>
+					<Values>
+					  <Condition/>
+					</Values>
+				  </TriggerCondition>
+				  <TriggerActions>
+					<Item>
+					  <TriggerAction>
+						<Template>ActionUnlockAsset</Template>
+						<Values>
+						  <Action/>
+						  <ActionUnlockAsset>
+							<UnlockAssets>
+								<Item>
+									<!-- [AssetPool] T1 Aggregate grocery -->
+								<Asset>103690503</Asset>
+								</Item>
+								<Item>
+									<!-- [AssetPool] T2 Aggregate processed -->
+								<Asset>103690603</Asset>
+								</Item>
+								<Item>
+									<!-- [AssetPool] T3 Aggregate Luxury food	-->
+								<Asset>103690703</Asset>
+								</Item>
+								<Item>
+									<!-- [AssetPool] T1 Agri Goods -->
+								<Asset>103690803</Asset>
+								</Item>
+								<Item>
+									<!-- [AssetPool] T2 Agri Goods -->
+								<Asset>103690903</Asset>
+								</Item>
+								<Item>
+									<!-- [AssetPool] T3 Agri Goods -->
+								<Asset>103691003</Asset>
+								</Item>							
+								<Item>
+										<!--[AssetPool] Beef only -->
+									<Asset>1010193369</Asset>
+								</Item>
+							</UnlockAssets>
+							<UnhideAssets/>
+						   </ActionUnlockAsset>
+						</Values>
+					  </TriggerAction>
+					</Item>
+				  </TriggerActions>
+				</Trigger>
+				<TriggerSetup/>
+			  </Values>
+			</Asset>
+												<!--  unlock fish / schnapps clothes Milk unhide  -->
+			<Asset>
+				<Template>Trigger</Template>
+				<Values>
+					<Standard>
+					<GUID>103698900</GUID>
+					<Name>intermediate moderate 1.0B</Name>
+					<IconFilename>data/ui/2kimages/main/profiles/resident_tier01.png</IconFilename>
+					</Standard>
+					<Trigger>
+					<TriggerCondition>
+						<Template>ConditionPlayerCounter</Template>
+						<Values>
+						<Condition />
+						<ConditionPlayerCounter>
+							<PlayerCounter>PopulationByLevel</PlayerCounter>
+							<Context>15000000</Context> <!-- farmer -->
+							<CounterAmount>50</CounterAmount>
+						</ConditionPlayerCounter>
+						</Values>
+					</TriggerCondition>
+					<TriggerActions>
+						<Item>
+						<TriggerAction>
+							<Template>ActionUnlockAsset</Template>
+							<Values>
+							<Action />
+							<ActionUnlockAsset>
+								<UnlockAssets>
+									<Item>
+									<!--[AssetPool] asset pool fish -->
+										<Asset>130056</Asset>
+									</Item>
+								</UnlockAssets>
+								<UnhideAssets>
+									<Item>
+										<!--[AssetPool] asset pool schnapps -->
+										<Asset>140028</Asset>
+									</Item>
+									<Item>
+										<!--[AssetPool] asset pool basic clothes -->
+										<Asset>130060</Asset>
+									</Item>
+									<Item>
+										<!--Asset Milk Product -->
+										<Asset>1440005</Asset>
+									</Item>
+									<Item>
+										<!--Asset Milk Farm -->
+										<Asset>1500010104</Asset>
+									</Item>
+								</UnhideAssets>
+							</ActionUnlockAsset>
+							</Values>
+						</TriggerAction>
+						</Item>
+					</TriggerActions>
+					</Trigger>
+					<TriggerSetup />
+				</Values>
+			</Asset>
+												<!--  unlock milk schnapps clothes / pig flour unhide -->
+				<Asset>
+					<Template>Trigger</Template>
+					<Values>
+						<Standard>
+						<GUID>103698901</GUID>
+						<Name>intermediate moderate 1.1B</Name>
+						<IconFilename>data/ui/2kimages/main/profiles/resident_tier01.png</IconFilename>
+						</Standard>
+						<Trigger>
+						<TriggerCondition>
+							<Template>ConditionPlayerCounter</Template>
+							<Values>
+							<Condition />
+							<ConditionPlayerCounter>
+								<PlayerCounter>PopulationByLevel</PlayerCounter>
+								<Context>15000000</Context>
+								<CounterAmount>100</CounterAmount>
+							</ConditionPlayerCounter>
+							</Values>
+						</TriggerCondition>
+						<TriggerActions>
+							<Item>
+							<TriggerAction>
+								<Template>ActionUnlockAsset</Template>
+								<Values>
+								<Action />
+								<ActionUnlockAsset>
+									<UnlockAssets>
+										<Item>
+											<!--Asset Milk Product -->
+											<Asset>1440005</Asset>
+										</Item>
+										<Item>
+											<!--Asset Milk Farm -->
+											<Asset>1500010104</Asset>
+										</Item>
+										<Item>
+											<!--[AssetPool] Schnapps -->
+											<Asset>140028</Asset>
+										</Item>
+										<Item>
+											<!--[AssetPool] Basic Clothes -->
+											<Asset>130060</Asset>
+										</Item>
+									</UnlockAssets>
+									<UnhideAssets>
+										<Item>
+											<!--[AssetPool] Pig only -->
+											<Asset>140027369</Asset>
+										</Item>
+											<Item>
+												<!--[AssetPool] Flour only -->
+												<Asset>140033369</Asset>
+											</Item>
+									</UnhideAssets>
+								</ActionUnlockAsset>
+								</Values>
+							</TriggerAction>
+							</Item>
+						</TriggerActions>
+						</Trigger>
+						<TriggerSetup />
+					</Values>
+				</Asset>
+												<!-- pig flour unlock / red pepper unhide -->
+					<Asset>
+						<Template>Trigger</Template>
+						<Values>
+							<Standard>
+							<GUID>103698902</GUID>
+							<Name>intermediate moderate 1.2B</Name>
+							<IconFilename>data/ui/2kimages/main/profiles/resident_tier01.png</IconFilename>
+							</Standard>
+							<Trigger>
+							<TriggerCondition>
+								<Template>ConditionPlayerCounter</Template>
+								<Values>
+								<Condition />
+								<ConditionPlayerCounter>
+									<PlayerCounter>PopulationByLevel</PlayerCounter>
+									<Context>15000000</Context>
+									<CounterAmount>150</CounterAmount>
+								</ConditionPlayerCounter>
+								</Values>
+							</TriggerCondition>
+							<TriggerActions>
+								<Item>
+								<TriggerAction>
+									<Template>ActionUnlockAsset</Template>
+									<Values>
+									<Action />
+									<ActionUnlockAsset>
+										<UnlockAssets>
+											<Item>
+												<!--[AssetPool] Pig Only -->
+												<Asset>140027369</Asset>
+											</Item>
+												<Item>
+													<!--[AssetPool] Flour Only -->
+													<Asset>140033369</Asset>
+												</Item>
+										</UnlockAssets>
+										<UnhideAssets>
+											<Item>
+												<!--[AssetPool] Red Pepper Only -->
+												<Asset>1010198369</Asset>
+											</Item>
+										</UnhideAssets>
+									</ActionUnlockAsset>
+									</Values>
+								</TriggerAction>
+								</Item>
+							</TriggerActions>
+							</Trigger>
+							<TriggerSetup />
+						</Values>
+					</Asset>
+												<!-- red pepper unlock -->
+						<Asset>
+							<Template>Trigger</Template>
+							<Values>
+								<Standard>
+								<GUID>103698903</GUID>
+								<Name>intermediate moderate 1.3B</Name>
+								<IconFilename>data/ui/2kimages/main/profiles/resident_tier01.png</IconFilename>
+								</Standard>
+								<Trigger>
+								<TriggerCondition>
+									<Template>ConditionPlayerCounter</Template>
+									<Values>
+									<Condition />
+									<ConditionPlayerCounter>
+										<PlayerCounter>PopulationByLevel</PlayerCounter>
+										<Context>15000000</Context> <!-- farmer -->
+										<CounterAmount>200</CounterAmount>
+									</ConditionPlayerCounter>
+									</Values>
+								</TriggerCondition>
+								<TriggerActions>
+									<Item>
+									<TriggerAction>
+										<Template>ActionUnlockAsset</Template>
+										<Values>
+										<Action />
+										<ActionUnlockAsset>
+											<UnlockAssets>
+												<Item>
+													<!--[AssetPool] Red Pepper Only -->
+													<Asset>1010198369</Asset>
+												</Item>
+											</UnlockAssets>
+											<UnhideAssets />
+										</ActionUnlockAsset>
+										</Values>
+									</TriggerAction>
+									</Item>
+								</TriggerActions>
+								</Trigger>
+								<TriggerSetup />
+							</Values>
+						</Asset>
+
+			</ModOp>
+
+
+														<!-- END of UNLOCK tweaks -->
+
+
+
+				<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+
+	         														<!-- Adds factories to boostable working condition list -->
+
+	<ModOp GUID="25000087" Type="add" Path="/Values/WorkforceMenu/BoostableFactories">
+		<Item>
+								<!-- grocery store [factory7] -->
+			<Factory>103690501</Factory>
+		</Item>
+		<Item>
+								<!-- processed food store [factory7] -->
+			<Factory>103690601</Factory>
+		</Item>
+		<Item>
+								<!-- Luxury food store [factory7] -->
+			<Factory>103690701</Factory>
+		</Item>
+		<Item>
+								<!-- T1 Agricultural Goods Store [factory7] -->
+			<Factory>103690801</Factory>
+		</Item>
+		<Item>
+								<!-- T2 Agricultural Goods store [factory7] -->
+			<Factory>103690901</Factory>
+		</Item>
+		<Item>
+								<!-- T3 Agricultural Goods store [factory7] -->
+			<Factory>103691001</Factory>
+		</Item>
+	</ModOp>
+
+  																										<!-- general production targets -->
+	<ModOp Type="add" GUID="368,6000018,193856" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+			<Item>
+				<GUID>103690501</GUID>
+			</Item>
+			<Item>
+				<GUID>103690601</GUID>
+			</Item>
+			<Item>
+				<GUID>103690701</GUID>
+			</Item>
+			<Item>
+				<GUID>103690801</GUID>
+			</Item>
+			<Item>
+				<GUID>103690901</GUID>
+			</Item>
+			<Item>
+				<GUID>103691001</GUID>
+			</Item>
+	</ModOp>
+				  																<!-- boosted by "all food productions" target list -->
+
+	<ModOp Type="add" GUID="190897" Path="/Values/ItemEffectTargetPool/EffectTargetGUIDs">
+			<Item>
+				<GUID>103690501</GUID>
+			</Item>
+			<Item>
+				<GUID>103690601</GUID>
+			</Item>
+			<Item>
+				<GUID>103690701</GUID>
+			</Item>
+			<Item>
+				<GUID>103690801</GUID>
+			</Item>
+			<Item>
+				<GUID>103690901</GUID>
+			</Item>
+			<Item>
+				<GUID>103691001</GUID>
+			</Item>
+	</ModOp>
+
+																	<!--ADD NEW ITEMS TO LISTs -->
+			    <!--ADD TO STANDARD PRODUCT STORAGE-LIST-->
+			
+	<ModOp Type="add" GUID="120055" Path="/Values/ProductStorageList/ProductList">
+			<Item>
+				<!-- Grocery [product] -->
+				<Product>103690500</Product>
+			</Item>
+			<Item>
+				<!-- Processed food [product] -->
+				<Product>103690600</Product>
+			</Item>
+			<Item>
+				<!--  Luxury food [product]	-->
+				<Product>103690700</Product>
+			</Item>
+			<Item>
+				<!-- T1 Agri Goods [product] -->
+				<Product>103690800</Product>
+			</Item>
+			<Item>
+				<!-- T2 Agri Goods [product] -->
+				<Product>103690900</Product>
+			</Item>
+			<Item>
+				<!-- T3 Agri Goods [product] -->
+				<Product>103691000</Product>
+			</Item>
+	</ModOp>
+
+	<!-- add Wooden Accessories to StandardMarketplaceModerateStorageList -->
+	<ModOp Type="addPrevSibling" GUID='120057' Path="/Values/ProductStorageList/ProductList/Item[Product='1010200']">
+		<Item>
+			<Product>120008</Product>
+		</Item>
+	</ModOp>
+		        <!-- add Wooden Accessories to StandardMarketplaceModerateStorageList -->
+  <ModOp Type="addNextSibling" GUID='120057' Path="/Values/ProductStorageList/ProductList/Item[Product='1010200']">
+	<Item>
+		<Product>1010195</Product>
+	</Item>
+	<Item>
+		<Product>1440005</Product>
+	</Item>
+	<Item>
+		<Product>1010197</Product>
+	</Item>
+	<Item>
+		<Product>1010199</Product>
+	</Item>
+	<Item>
+		<Product>1010235</Product>
+	</Item>
+	<Item>
+		<Product>1010198</Product>
+	</Item>
+	<Item>
+		<Product>1010193</Product>
+	</Item>
+  </ModOp>
+																				<!--ADD TO SPECIFIC PRODUCT-LIST-->
+		
+				  <!--  FarmerConsumerGoods / Worker ConsumerGoods  -->
+		  
+	<ModOp Type="add" GUID="501995,501996" Path="/Values/ProductList/List">
+		<Item>
+			<!--  wood [product]-->
+			<Product>120008</Product>
+		</Item>
+				<Item>
+					<!--  pig [product]-->
+					<Product>1010199</Product>
+				</Item>
+				<Item>
+					<!--  red pepper [product] -->
+					<Product>1010198</Product>
+				</Item>
+	</ModOp>
+		
+				  <!--  Worker ConsumerGoods  -->
+		  
+	<ModOp Type="add" GUID="501996" Path="/Values/ProductList/List">
+				<Item>
+					<!--  Beef [product] -->
+					<Product>1010193</Product>
+				</Item>
+	</ModOp>
+					
+				  <!--  FarmerConsumerGoods / Worker ConsumerGoods / ArtisanConsumerGoods -->
+		  
+	<ModOp Type="add" GUID="501995,501996,501997" Path="/Values/ProductList/List">
+			<Item>
+					<!-- Potatoes [product] -->
+				<Product>1010195</Product>
+			</Item>
+			<Item>
+				<!-- Milk [product] -->
+				<Product>1440005</Product>
+			</Item>
+			<Item>
+				<!--  Cheese [product]-->
+				<Product>1500010102</Product>
+			</Item>
+			<Item>
+				<!-- Wool [product] -->
+				<Product>1010197</Product>
+			</Item>
+			<Item>
+				<!--  flour [product] -->
+				<Product>1010235</Product>
+			</Item>
+	</ModOp>
+					
+							<!--  ArtisanConsumerGoods  -->
+		
+	<ModOp Type="add" GUID="501997" Path="/Values/ProductList/List">
+			<Item>
+				<!--  fish [product]-->
+				<Product>1010200</Product>
+			</Item>
+			<Item>
+				<!--  workClothes [product]-->
+				<Product>1010237</Product>
+			</Item>
+			<Item>
+				<!--  clay [product]-->
+				<Product>1010201</Product>
+			</Item>
+			<Item>
+				<!--  goulash [product]-->
+				<Product>1010215</Product>
+			</Item>
+			<Item>
+				<!--  cotton fabric [product]-->
+				<Product>1010240</Product>
+			</Item>
+			<Item>
+				<!--  Bombins [product]-->
+				<Product>120037</Product>
+			</Item>
+			<Item>
+				<!--  linen [product]-->
+				<Product>114391</Product>
+			</Item>
+					<Item>
+						<!-- T1 Agri Goods [product] -->
+					<Product>103690800</Product>
+					</Item>
+					<Item>
+						<!-- T2 Agri Goods [product] -->
+					<Product>103690900</Product>
+					</Item>
+					<Item>
+						<!-- T3 Agri Goods [product]-->
+						<Product>103691000</Product>
+					</Item>
+	</ModOp>
+		
+						<!--  EngineerConsumerGoods  -->
+
+	<ModOp Type="add" GUID="501998" Path="/Values/ProductList/List">
+			<Item>
+				<!--  fish [product]-->
+				<Product>1010200</Product>
+			</Item>
+			<Item>
+				<!--  workClothes [product]-->
+				<Product>1010237</Product>
+			</Item>
+			<Item>
+				<!--  sausage [product]-->
+				<Product>1010238</Product>
+			</Item>
+			<Item>
+				<!--  bread [product]-->
+				<Product>1010213</Product>
+			</Item>
+			<Item>
+				<!--  beer [product]-->
+				<Product>1010214</Product>
+			</Item>
+			<Item>
+				<!--  soap [product]-->
+				<Product>1010203</Product>
+			</Item>
+			<Item>
+				<!-- Paper [product] -->
+				<Product>117702</Product>
+			</Item>
+			<Item>
+				<!-- Fried Plantain [product] -->
+				<Product>120033</Product>
+			</Item>
+			<Item>
+				<!-- Tortilla [product] -->
+				<Product>120035</Product>
+			</Item>
+			<Item>
+				<!-- Chocolate [product] -->
+				<Product>1010258</Product>
+			</Item>
+						<Item>
+							<!-- T3 Agricultural Goods [product] -->
+							<Product>103691000</Product>
+						</Item>
+			<Item>
+				<!-- Hibiscus Tea [product] -->
+				<Product>114390</Product>
+			</Item>
+			<Item>
+				<!-- Dried Meat [product] -->
+				<Product>114359</Product>
+			</Item>
+			<Item>
+				<!-- Clay Pipes [product] -->
+				<Product>114414</Product>
+			</Item>
+			<Item>
+				<!-- Telephone [product] -->
+				<Product>114431</Product>
+			</Item>
+			<Item>
+				<!-- Lemonade [product] -->
+				<Product>133185</Product>
+			</Item>
+	</ModOp>
+		
+										<!--  InvestorConsumerGoods  -->
+	
+	<ModOp Type="add" GUID="501999" Path="/Values/ProductList/List">
+					<Item>
+						<!-- T1 Grocery [product] -->
+					<Product>103690500</Product>
+					</Item>
+		<Item>
+			<!--  beer [product]-->
+			<Product>1010214</Product>
+		</Item>
+		<Item>
+			<!-- Processed food [product] -->
+			<Product>103690600</Product>
+		</Item>
+					<Item>
+						<!-- T2 Luxury food	[product]-->
+						<Product>103690700</Product>
+					</Item>
+					<Item>
+						<!-- T3 Agricultural Goods [product] -->
+						<Product>103691000</Product>
+					</Item>
+		<Item>
+			<!-- Telephone [product] -->
+			<Product>114431</Product>
+		</Item>
+		<Item>
+			<!-- Lemonade [product] -->
+			<Product>133185</Product>
+		</Item>
+	</ModOp>
+		
+														<!--  TouristConsumerGoods -->
+		  
+	<ModOp Type="add" GUID="502309" Path="/Values/ProductList/List">
+		<Item>
+			<!-- T2 Processed food [product] -->
+			<Product>103690600</Product>
+		</Item>
+		<Item>
+			<!-- T3 Agricultural Goods [product] -->
+			<Product>103691000</Product>
+		</Item>
+	</ModOp>
+		
+												<!--  ArtisanWorkforceGoods /  ArtisanUnlockGoods  -->
+		  
+	<ModOp Type="add" GUID="502006,502019" Path="/Values/ProductList/List">
+		<Item>
+			<!-- T1 Agri Goods [product] -->
+			<Product>103690800</Product>
+		</Item>	
+		<Item>
+			<!-- T2 Agri Goods [product] -->
+			<Product>103690900</Product>
+		</Item>
+		<Item>
+			<!-- T3 Agri Goods [product]-->
+			<Product>103691000</Product>
+		</Item>
+	</ModOp>
+		
+											<!--  ArtisanWorkforceGoods /  InvestorUnlockGoods  -->
+		  
+	<ModOp Type="add" GUID="502006,502021" Path="/Values/ProductList/List">
+		<Item>
+				<!-- Grocery [product] -->
+			<Product>103690500</Product>
+		</Item>	
+		<Item>
+			<!-- Processed food [product] -->
+			<Product>103690600</Product>
+		</Item>
+		<Item>
+			<!-- Luxury food	[product]-->
+			<Product>103690700</Product>
+		</Item>
+	</ModOp>
+		
+													<!--  AgriculturalGoods_Europe -->
+		  
+	<ModOp Type="add" GUID="502037" Path="/Values/ProductList/List">
+		<Item>
+				<!-- T1 Agri Goods [product] -->
+			<Product>103690800</Product>
+		</Item>	
+		<Item>
+			<!-- T2 Agri Goods [product] -->
+			<Product>103690900</Product>
+		</Item>
+		<Item>
+			<!-- T3 Agri Goods [product]-->
+			<Product>103691000</Product>
+		</Item>
+	</ModOp>
+
+</ModOps>
+
+
+
+
+												<!-- worker Cheese unhide 
+												<Asset>
+													<Template>Trigger</Template>
+													<Values>
+														<Standard>
+														<GUID>103698904</GUID>
+														<Name>intermediate moderate 2.0B</Name>
+														<IconFilename>data/ui/2kimages/main/profiles/resident_tier02.png</IconFilename>
+														</Standard>
+														<Trigger>
+														<TriggerCondition>
+															<Template>ConditionPlayerCounter</Template>
+															<Values>
+															<Condition />
+															<ConditionPlayerCounter>
+																<PlayerCounter>PopulationByLevel</PlayerCounter>
+																<Context>15000001</Context>
+																<CounterAmount>1</CounterAmount>
+															</ConditionPlayerCounter>
+															</Values>
+														</TriggerCondition>
+														<TriggerActions>
+															<Item>
+															<TriggerAction>
+																<Template>ActionUnlockAsset</Template>
+																<Values>
+																<Action />
+																<ActionUnlockAsset>
+																	<UnlockAssets />
+																	<UnhideAssets>
+																		<Item>
+																			<Asset>1500010167</Asset>
+																		</Item>
+																	</UnhideAssets>
+																</ActionUnlockAsset>
+																</Values>
+															</TriggerAction>
+															</Item>
+														</TriggerActions>
+														</Trigger>
+														<TriggerSetup />
+													</Values>
+												</Asset>
+												
+													<Asset>
+														<Template>Trigger</Template>
+														<Values>
+															<Standard>
+															<GUID>103698905</GUID>
+															<Name>intermediate moderate 2.1B</Name>
+															<IconFilename>data/ui/2kimages/main/profiles/resident_tier02.png</IconFilename>
+															</Standard>
+															<Trigger>
+															<TriggerCondition>
+																<Template>ConditionPlayerCounter</Template>
+																<Values>
+																<Condition />
+																<ConditionPlayerCounter>
+																	<PlayerCounter>PopulationByLevel</PlayerCounter>
+																	<Context>15000001</Context>
+																	<CounterAmount>100</CounterAmount>
+																</ConditionPlayerCounter>
+																</Values>
+															</TriggerCondition>
+															<TriggerActions>
+																<Item>
+																<TriggerAction>
+																	<Template>ActionUnlockAsset</Template>
+																	<Values>
+																	<Action />
+																	<ActionUnlockAsset>
+																		<UnlockAssets>
+																			<Item>
+																				<Asset>1500010167</Asset>
+																			</Item>
+																		</UnlockAssets>
+																		<UnhideAssets />
+																	</ActionUnlockAsset>
+																	</Values>
+																</TriggerAction>
+																</Item>
+															</TriggerActions>
+															</Trigger>
+															<TriggerSetup />
+														</Values>
+													</Asset>
+												<Asset>
+													<Template>Trigger</Template>
+														<Values>
+															<Standard>
+																<GUID>103698906</GUID>
+																<Name>intermediate moderate 2.4B</Name>
+																<IconFilename>data/ui/2kimages/main/profiles/resident_tier02.png</IconFilename>
+															</Standard>
+																<Trigger>
+																	<TriggerCondition>
+																		<Template>ConditionPlayerCounter</Template>
+																		<Values>
+																		<Condition />
+																		<ConditionPlayerCounter>
+																			<PlayerCounter>PopulationByLevel</PlayerCounter>
+																			<Context>15000001</Context>
+																			<CounterAmount>300</CounterAmount>
+																		</ConditionPlayerCounter>
+																		</Values>
+																	</TriggerCondition>
+																	<TriggerActions>
+																		<Item>
+																			<TriggerAction>
+																				<Template>ActionUnlockAsset</Template>
+																					<Values>
+																					<Action />
+																					<ActionUnlockAsset>
+																						<UnlockAssets />
+																							<UnhideAssets>
+																								<Item>
+																									<Asset>1500010163</Asset>
+																								</Item>
+																								<Item>
+																									<Asset>1500010167</Asset>
+																								</Item>
+																								<Item>
+																									<Asset>1500010164</Asset>
+																								</Item>
+																							</UnhideAssets>
+																					</ActionUnlockAsset>
+																					</Values>
+																			</TriggerAction>
+																		</Item>
+																	</TriggerActions>
+																</Trigger>
+															<TriggerSetup />
+														</Values>
+												</Asset>
+					
+													<Asset>
+														<Template>Trigger</Template>
+														<Values>
+															<Standard>
+															<GUID>103698906</GUID>
+															<Name>intermediate moderate 2.5B</Name>
+															<IconFilename>data/ui/2kimages/main/profiles/resident_tier02.png</IconFilename>
+															</Standard>
+															<Trigger>
+															<TriggerCondition>
+																<Template>ConditionPlayerCounter</Template>
+																<Values>
+																<Condition />
+																<ConditionPlayerCounter>
+																	<PlayerCounter>PopulationByLevel</PlayerCounter>
+																	<Context>15000001</Context>
+																	<CounterAmount>400</CounterAmount>
+																</ConditionPlayerCounter>
+																</Values>
+															</TriggerCondition>
+															<TriggerActions>
+																<Item>
+																<TriggerAction>
+																	<Template>ActionUnlockAsset</Template>
+																	<Values>
+																	<Action />
+																	<ActionUnlockAsset>
+																		<UnlockAssets>
+																			<Item>
+																				<Asset>1500010163</Asset>
+																			</Item>
+																			<Item>
+																				<Asset>1500010167</Asset>
+																			</Item>
+																			<Item>
+																				<Asset>1500010164</Asset>
+																			</Item>
+																		</UnlockAssets>
+																		<UnhideAssets />
+																	</ActionUnlockAsset>
+																	</Values>
+																</TriggerAction>
+																</Item>
+															</TriggerActions>
+															</Trigger>
+															<TriggerSetup />
+														</Values>
+													</Asset>-->
